@@ -1,33 +1,11 @@
-# SixArm » Liquibase » Examples
+# SixArm » Liquibase » Schema examples
 
 * [Liquibase introduction](#liquibase-introduction)
+* [Schema example files](#schema-example-files)
 * [Source code](#source-code)
 * [Schema conventions](#schema-conventions)
 * [Why use SQL vs. XML vs. YAML](#why-use-sql-xml-yaml)
 * [Bonus fields for growth](#bonus-fields-for-growth)
-
-Files in order of popularity:
-* [person](person.sql)
-* [place](place.sql)
-* [thing](thing.sql)
-* [lifespan](lifespan.sql)
-* Geography:
-  * [geolocation](geolocation.sql)
-  * [country](country.sql)
-  * [country_subdivision](country_subdivision.sql)
-* Access:
-  * [access_role](access_role.sql)
-  * [access_assigment](access_assignment.sql)
-  * [access_operation](access_operation.sql)
-  * [access_permission](access_permission.sql)
-* Postal:
-  * [postal_address](postal_address.sql)
-  * [postal_code](postal_code.sql) a.k.a. ZIP code
-  * [postal_locality](postal_region.sql) a.k.a. city
-  * [postal_region](postal_region.sql) a.k.a. state or province
-* Market:
-  * [market_area](market_area.sql)
-  * [market_sector](market_sector.sql)
 
 
 <h2><a name="liquibase-introduction">Liquibase introduction</a></h2>
@@ -36,18 +14,34 @@ Liquibase is an open source tool for managing database schema changes.
 
 See https://en.wikipedia.org/wiki/Liquibase
 
-Our projects use database schema changes within source code, and within large projects, so we have examples here to help new projects.
+Our projects use database schema changes within source code, and within large projects, so we have schema examples here to help new projects.
 
-Example:
 
-    --liquibase formatted sql
+<h2><a name="schema-example-files">Schema example files</a></h2>
 
-    --changeset sixarm@sixarm.com:1
-    create table demo (
-      id int not null primary key,
-      name varchar(255)
-    );
-    --rollback drop table demo;
+Schema example files in order of popularity:
+* [person](person.sql)
+* [place](place.sql)
+* [thing](thing.sql)
+* [lifespan](lifespan.sql)
+* Access control:
+  * [access_role](access_role.sql)
+  * [access_assigment](access_assignment.sql)
+  * [access_operation](access_operation.sql)
+  * [access_permission](access_permission.sql)
+* Geography:
+  * [geolocation](geolocation.sql)
+  * [country](country.sql)
+  * [country_subdivision](country_subdivision.sql)
+  * [neighborhood](neighborhood.sql)
+* Postal mail:
+  * [postal_address](postal_address.sql)
+  * [postal_code](postal_code.sql) a.k.a. ZIP code
+  * [postal_locality](postal_locality.sql) a.k.a. city
+  * [postal_region](postal_region.sql) a.k.a. state or province
+* Market:
+  * [market_area](market_area.sql)
+  * [market_sector](market_sector.sql)
 
 
 <h2><a name="schema-conventions">Schema conventions</a></h2>
