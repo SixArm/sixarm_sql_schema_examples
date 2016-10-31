@@ -14,6 +14,7 @@ Most popular:
   * [place.sql](place.sql)
   * [thing.sql](thing.sql)
   * [event.sql](event.sql)
+  * [action.sql](action.sql)
   * [tag.sql](tag.sql)
   * [color.sql](color.sql)
 
@@ -42,6 +43,7 @@ Postal:
 Business:
   * [brand.sql](brand.sql)
   * [product.sql(product.sql)
+  * [service.sql(service.sql)
   * [offer.sql](offer.sql)
   * [market_area.sql](market_area.sql)
   * [market_sector.sql](market_sector.sql)
@@ -135,7 +137,7 @@ Examples:
     status_id int,          -- Typically relates to a status table suitable for the app
     status_ie varchar(255), -- Typically freeform text entered by a user 
 
-    uri text,               -- Typically a URL to more information about this record
+    url text,               -- Typically a URL to more information about this record
     note longtext,          -- Typically freeform text entered by a user
 
 

@@ -14,5 +14,11 @@ create table product (
   width float,
   depth float,
   weight float,
+  color_id int,
+  -- Global Trade Item Number (GTIN)
+  gtin8 char(8),      -- The GTIN-8 code
+  gtin12 char(12),    -- The GTIN-12 code
+  gtin13 char(13),    -- The GTIN-13 code
+  gtin14 char(14),    -- The GTIN-14 code
 );
 --rollback drop table product;
