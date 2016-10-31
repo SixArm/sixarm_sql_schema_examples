@@ -23,6 +23,7 @@ Schema example files in order of popularity:
 * [person](person.sql)
 * [place](place.sql)
 * [thing](thing.sql)
+* [tag](tag.sql)
 * [lifespan](lifespan.sql)
 * Organization
   * [organization](organization.sql)
