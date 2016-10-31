@@ -50,6 +50,9 @@ Schema example files in order of popularity:
 * Market
   * [market_area](market_area.sql)
   * [market_sector](market_sector.sql)
+* Other
+  * [email_pop_account](email_pop_account.sql)
+  * [imagemagick_filter](imagemagick_filter.sql)
 
 
 <h2><a name="schema-conventions">Schema conventions</a></h2>
