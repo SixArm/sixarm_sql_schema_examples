@@ -42,6 +42,7 @@ Postal:
 Business:
   * [brand.sql](brand.sql)
   * [product.sql(product.sql)
+  * [offer.sql](offer.sql)
   * [market_area.sql](market_area.sql)
   * [market_sector.sql](market_sector.sql)
 
