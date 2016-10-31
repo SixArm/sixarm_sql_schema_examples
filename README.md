@@ -24,24 +24,27 @@ Schema example files in order of popularity:
 * [place](place.sql)
 * [thing](thing.sql)
 * [organization](organization.sql)
-* [brand](brand.sql)
 * [lifespan](lifespan.sql)
-* Access control:
+* Access control
   * [access_role](access_role.sql)
   * [access_assigment](access_assignment.sql)
   * [access_operation](access_operation.sql)
   * [access_permission](access_permission.sql)
-* Geography:
+* Geography
   * [geolocation](geolocation.sql)
   * [country](country.sql)
   * [country_subdivision](country_subdivision.sql)
   * [neighborhood](neighborhood.sql)
-* Postal mail:
+* Postal mail
   * [postal_address](postal_address.sql)
   * [postal_code](postal_code.sql) a.k.a. ZIP code
   * [postal_locality](postal_locality.sql) a.k.a. city
   * [postal_region](postal_region.sql) a.k.a. state or province
-* Market:
+* Brand
+  * [brand](brand.sql)
+  * [brand__market_sector](brand__sector.sql)
+  * [brand__organization](brand__organization.sql)
+* Market
   * [market_area](market_area.sql)
   * [market_sector](market_sector.sql)
 
