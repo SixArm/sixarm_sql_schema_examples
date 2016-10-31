@@ -24,6 +24,7 @@ Schema example files in order of popularity:
   * [person](person.sql)
   * [place](place.sql)
   * [thing](thing.sql)
+  * [event](event.sql)
   * [tag](tag.sql)
   * [color](color.sql)
 * Organization
