@@ -23,8 +23,10 @@ Schema example files in order of popularity:
 * [person](person.sql)
 * [place](place.sql)
 * [thing](thing.sql)
-* [organization](organization.sql)
 * [lifespan](lifespan.sql)
+* Organization
+  * [organization](organization.sql)
+  * [organization__person](organization__person.sql)
 * Access control
   * [access_role](access_role.sql)
   * [access_assigment](access_assignment.sql)
