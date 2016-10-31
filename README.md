@@ -10,52 +10,52 @@
 <h2><a name="schema-example-files">Schema example files</a></h2>
 
 Most popular:
-  * [person](person.sql)
-  * [place](place.sql)
-  * [thing](thing.sql)
-  * [event](event.sql)
-  * [tag](tag.sql)
-  * [color](color.sql)
+  * [person.sql](person.sql)
+  * [place.sql](place.sql)
+  * [thing.sql](thing.sql)
+  * [event.sql](event.sql)
+  * [tag.sql](tag.sql)
+  * [color.sql](color.sql)
 
 Organization:
-  * [organization](organization.sql)
-  * [organization__person](organization__person.sql)
+  * [organization.sql](organization.sql)
+  * [organization__person.sql](organization__person.sql)
 
 Access control:
-  * [access_role](access_role.sql)
-  * [access_assigment](access_assignment.sql)
-  * [access_operation](access_operation.sql)
-  * [access_permission](access_permission.sql)
+  * [access_role.sql](access_role.sql)
+  * [access_assigment.sql](access_assignment.sql)
+  * [access_operation.sql](access_operation.sql)
+  * [access_permission.sql](access_permission.sql)
 
 Geography:
-  * [geolocation](geolocation.sql)
-  * [country](country.sql)
-  * [country_subdivision](country_subdivision.sql)
-  * [neighborhood](neighborhood.sql)
+  * [geolocation.sql](geolocation.sql)
+  * [country.sql](country.sql)
+  * [country_subdivision.sql](country_subdivision.sql)
+  * [neighborhood.sql](neighborhood.sql)
 
 Postal:
-  * [postal_address](postal_address.sql)
-  * [postal_code](postal_code.sql)
-  * [postal_locality](postal_locality.sql)
-  * [postal_region](postal_region.sql)
+  * [postal_address.sql](postal_address.sql)
+  * [postal_code.sql](postal_code.sql)
+  * [postal_locality.sql](postal_locality.sql)
+  * [postal_region.sql](postal_region.sql)
 
 Brand:
-  * [brand](brand.sql)
-  * [brand__market_sector](brand__sector.sql)
-  * [brand__organization](brand__organization.sql)
+  * [brand.sql](brand.sql)
+  * [brand__market_sector.sql](brand__sector.sql)
+  * [brand__organization.sql](brand__organization.sql)
 
 Market:
-  * [market_area](market_area.sql)
-  * [market_sector](market_sector.sql)
+  * [market_area.sql](market_area.sql)
+  * [market_sector.sql](market_sector.sql)
 
 Network:
-  * [email_pop_account](email_pop_account.sql)
-  * [ftp_account](ftp_account.sql)
+  * [email_pop_account.sql](email_pop_account.sql)
+  * [ftp_account.sql](ftp_account.sql)
 
 Misc:
-  * [rag](rag.sql)
-  * [imagemagick_filter](imagemagick_filter.sql)
-  * [lifespan](lifespan.sql)
+  * [rag.sql](rag.sql)
+  * [imagemagick_filter.sql](imagemagick_filter.sql)
+  * [lifespan.sql](lifespan.sql)
 
 
 <h2><a name="schema-conventions">Schema conventions</a></h2>
