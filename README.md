@@ -1,61 +1,59 @@
 # SixArm » SQL » Schema examples
 
-* [Liquibase introduction](#liquibase-introduction)
 * [Schema example files](#schema-example-files)
 * [Source code](#source-code)
 * [Schema conventions](#schema-conventions)
-* [Why use SQL vs. XML vs. YAML](#why-use-sql-xml-yaml)
 * [Bonus fields for growth](#bonus-fields-for-growth)
-
-
-<h2><a name="liquibase-introduction">Liquibase introduction</a></h2>
-
-Liquibase is an open source tool for managing database schema changes.
-
-See https://en.wikipedia.org/wiki/Liquibase
-
-Our projects use database schema changes within source code, and within large projects, so we have schema examples here to help new projects.
+* [Liquibase introduction](#liquibase-introduction)
+* [Why we use Liquibase SQL vs. XML vs. YAML](#why-use-sql-xml-yaml)
 
 
 <h2><a name="schema-example-files">Schema example files</a></h2>
 
-Schema example files in order of popularity:
-* Most popular
+Most popular:
   * [person](person.sql)
   * [place](place.sql)
   * [thing](thing.sql)
   * [event](event.sql)
   * [tag](tag.sql)
   * [color](color.sql)
-* Organization
+
+Organization:
   * [organization](organization.sql)
   * [organization__person](organization__person.sql)
-* Access control
+
+Access control:
   * [access_role](access_role.sql)
   * [access_assigment](access_assignment.sql)
   * [access_operation](access_operation.sql)
   * [access_permission](access_permission.sql)
-* Geography
+
+Geography:
   * [geolocation](geolocation.sql)
   * [country](country.sql)
   * [country_subdivision](country_subdivision.sql)
   * [neighborhood](neighborhood.sql)
-* Postal mail
+
+Postal:
   * [postal_address](postal_address.sql)
   * [postal_code](postal_code.sql)
   * [postal_locality](postal_locality.sql)
   * [postal_region](postal_region.sql)
-* Brand
+
+Brand:
   * [brand](brand.sql)
   * [brand__market_sector](brand__sector.sql)
   * [brand__organization](brand__organization.sql)
-* Market
+
+Market:
   * [market_area](market_area.sql)
   * [market_sector](market_sector.sql)
-* Network
+
+Network:
   * [email_pop_account](email_pop_account.sql)
   * [ftp_account](ftp_account.sql)
-* Other
+
+Misc:
   * [rag](rag.sql)
   * [imagemagick_filter](imagemagick_filter.sql)
   * [lifespan](lifespan.sql)
@@ -104,14 +102,8 @@ Use typical data type default sizes.
   * For example, we use the data type "varchar(255)" as a default when we don't know a text field will be somewhat short.
 
 
-<h2><a name="why-use-sql-xml-yaml">Why use SQL vs. XML vs. YAML?</a></h2>
+<h2><a name="bonus-fields-for-growth">Bonus fields for growth</a></h2>
 
-Liquibase files can be written in SQL, or XML, or YAML. We prefer SQL because more database administrators know it.
-
-If you prefer XML or YAML and would like to translate our examples, then we welcome the help and also welcome pull requests.
-
-
-## Bonus fields for growth
 
 In practice we often add some bonus fields to each table; these fields help us with the growth of the app, and also the administration of the app.
 
@@ -142,3 +134,21 @@ Examples:
 
     uri text,               -- Typically a URL to more information about this record
     note longtext,          -- Typically freeform text entered by a user
+
+
+<h2><a name="liquibase-introduction">Liquibase introduction</a></h2>
+
+Liquibase is an open source tool for managing database schema changes.
+
+See https://en.wikipedia.org/wiki/Liquibase
+
+Our projects use database schema changes within source code, and within large projects, so we have schema examples here to help new projects.
+
+
+<h2><a name="why-we-use-liquibase-sql-xml-yaml">Why we use Liquibase SQL vs. XML vs. YAML</a></h2>
+
+Liquibase files can be written in SQL, or XML, or YAML. We prefer SQL because more database administrators know it.
+
+If you prefer XML or YAML and would like to translate our examples, then we welcome the help and also welcome pull requests.
+
+
