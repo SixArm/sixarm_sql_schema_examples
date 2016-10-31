@@ -1,4 +1,4 @@
-# SixArm » Liquibase » Schema examples
+# SixArm » SQL » Schema examples
 
 * [Liquibase introduction](#liquibase-introduction)
 * [Schema example files](#schema-example-files)
@@ -42,9 +42,9 @@ Schema example files in order of popularity:
   * [neighborhood](neighborhood.sql)
 * Postal mail
   * [postal_address](postal_address.sql)
-  * [postal_code](postal_code.sql) a.k.a. ZIP code
-  * [postal_locality](postal_locality.sql) a.k.a. city
-  * [postal_region](postal_region.sql) a.k.a. state or province
+  * [postal_code](postal_code.sql)
+  * [postal_locality](postal_locality.sql)
+  * [postal_region](postal_region.sql)
 * Brand
   * [brand](brand.sql)
   * [brand__market_sector](brand__sector.sql)
