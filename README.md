@@ -39,12 +39,9 @@ Postal:
   * [postal_locality.sql](postal_locality.sql)
   * [postal_region.sql](postal_region.sql)
 
-Brand:
+Business:
   * [brand.sql](brand.sql)
-  * [brand__market_sector.sql](brand__sector.sql)
-  * [brand__organization.sql](brand__organization.sql)
-
-Market:
+  * [product.sql(product.sql)
   * [market_area.sql](market_area.sql)
   * [market_sector.sql](market_sector.sql)
 
@@ -56,6 +53,12 @@ Misc:
   * [rag.sql](rag.sql)
   * [imagemagick_filter.sql](imagemagick_filter.sql)
   * [lifespan.sql](lifespan.sql)
+
+Joins:
+  * [brand__market_sector.sql](brand__sector.sql)
+  * [brand__organization.sql](brand__organization.sql)
+  * [place__event.sql](place__event.sql)
+  * [person__event.sql](person__event.sql)
 
 
 <h2><a name="schema-conventions">Schema conventions</a></h2>

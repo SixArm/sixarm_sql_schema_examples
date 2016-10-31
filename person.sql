@@ -11,9 +11,9 @@ create table person (
   family_name_fr varchar(255),        -- example: Anderçon
   additional_name_en varchar(255),    -- example: Amy
   additional_name_fr varchar(255),    -- example: Aimée
-  height float,                  -- example: 1.65 meters
-  weight float,                  -- example: 70000 grams 
-  geolocation_id int,            -- example: where the person is now
-  lifespan_id int,               -- example: birth date is 2000-01-01
+  height float,                       -- example: 1.65 meters
+  weight float,                       -- example: 70000 grams 
+  geolocation_id int,                 -- example: where the person is now
+  lifespan_id int,                    -- example: birth date is 2000-01-01
 );
 --rollback drop table person;
