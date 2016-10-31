@@ -4,7 +4,8 @@
 * [Schema conventions](#schema-conventions)
 * [Bonus fields for growth](#bonus-fields-for-growth)
 * [Liquibase introduction](#liquibase-introduction)
-* [Why we use Liquibase SQL vs. XML vs. YAML](#why-use-sql-xml-yaml)
+* [Why we use Liquibase SQL vs. XML vs. YAML](#why-we-use-liquibase-sql-xml-yaml)
+* [Tracking](#tracking)
 
 
 <h2><a name="schema-example-files">Schema example files</a></h2>
@@ -157,3 +158,11 @@ Liquibase files can be written in SQL, or XML, or YAML. We prefer SQL because mo
 If you prefer XML or YAML and would like to translate our examples, then we welcome the help and also welcome pull requests.
 
 
+<h2><a name="tracking">Tracking</a></h2>
+
+* Package: sixarm_sql_schema_examples
+* Version: 5.0.0
+* Created: 1996-01-01
+* Updated: 2016-10-30
+* License: BSD, MIT, GPL
+* Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
