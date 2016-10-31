@@ -1,7 +1,6 @@
 # SixArm » SQL » Schema examples
 
 * [Schema example files](#schema-example-files)
-* [Source code](#source-code)
 * [Schema conventions](#schema-conventions)
 * [Bonus fields for growth](#bonus-fields-for-growth)
 * [Liquibase introduction](#liquibase-introduction)
