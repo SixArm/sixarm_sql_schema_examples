@@ -67,9 +67,9 @@ Joins:
 
 <h2><a name="schema-conventions">Schema conventions</a></h2>
 
-Our examples aim to be consistent with industry standard schemas, such as the Schema.org project.
+Use industry standard schemas such as the Schema.org project.
 
-  * For example, a postal address has "region" field, not "state" nor "province".
+  * For example, a postal address has a field for "locality", not "city".
 
 Use scientific measurement units.
 
@@ -79,9 +79,9 @@ Use a table name that is singular, not plural.
 
   * For example, the examples have a "person" table, not "persons" nor "people".
 
-If a text field could be different in different languages, then append the language code.
+Use a language code suffix when a text field could be different in different languages.
 
-  * For example, a person's name can use English "Amy" and French "Aimée", so use fields "name_en" and "name_fr".
+  * For example, a person's name in English is "Amy" and in French is "Aimée", so use fields "name_en" and "name_fr".
 
 If a field can be a relation or freeform text, use two fields, one with suffix "_id" and one with suffix "_ie" meaning "I.e., in other words".
 
@@ -89,9 +89,9 @@ If a field can be a relation or freeform text, use two fields, one with suffix "
 
 Use denormalization if it's likely to speed up typical usage.
 
-  * For example, some tables duplicate the "postal_code" field because many of our apps use it to speed up local search.
+  * For example, some tables duplicate the "postal_code" field, because many of our apps use it to speed up local search.
 
-Dates and times use ISO standard formatting and time zones.
+Use dates formats and time formats that are consistent with ISO standard formats.
 
   * For example, the format is Year-Month-Day and Hour:Minute:Second and Zulu time zone, such as "YYYY-MM-DDTHH:MM:SSZ".
 
@@ -99,13 +99,17 @@ Any date or time that must be local must use the "_local" suffix.
 
   * For example, the "person" table has the "birth_date_local" field because we care about the person's local date birthday, not Zulu date birthday.
 
-Handling corner cases well is more important than saving data space:
+Handling corner cases well is more important than saving data space.
 
   * For example, the concepts of a "postal_region" and "country_subdivision" are nearly identical, but not quite, so we store both.
 
 Use typical data type default sizes.
 
-  * For example, we use the data type "varchar(255)" as a default when we don't know a text field will be somewhat short.
+  * For example, we use the data type "varchar(255)" as a default, when we don't know a text field will be somewhat short.
+
+Use some of our notable exceptions because they are better at scale.
+
+  * For example, we use "start" and "stop", not "begin" and "end", nor "valid from" and "valid to".
 
 
 <h2><a name="bonus-fields-for-growth">Bonus fields for growth</a></h2>
