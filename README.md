@@ -20,11 +20,12 @@ Our projects use database schema changes within source code, and within large pr
 <h2><a name="schema-example-files">Schema example files</a></h2>
 
 Schema example files in order of popularity:
-* [person](person.sql)
-* [place](place.sql)
-* [thing](thing.sql)
-* [tag](tag.sql)
-* [lifespan](lifespan.sql)
+* Most popular
+  * [person](person.sql)
+  * [place](place.sql)
+  * [thing](thing.sql)
+  * [tag](tag.sql)
+  * [color](color.sql)
 * Organization
   * [organization](organization.sql)
   * [organization__person](organization__person.sql)
@@ -54,7 +55,9 @@ Schema example files in order of popularity:
   * [email_pop_account](email_pop_account.sql)
   * [ftp_account](ftp_account.sql)
 * Other
+  * [rag](rag.sql)
   * [imagemagick_filter](imagemagick_filter.sql)
+  * [lifespan](lifespan.sql)
 
 
 <h2><a name="schema-conventions">Schema conventions</a></h2>
