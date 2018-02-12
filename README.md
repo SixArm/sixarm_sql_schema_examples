@@ -1,14 +1,14 @@
 # SixArm » SQL » Schema examples
 
-* [Schema example files](#schema-example-files)
+* [Schema example files here](#schema-example-files-here)
 * [Schema conventions](#schema-conventions)
 * [Bonus fields for growth](#bonus-fields-for-growth)
 * [Liquibase introduction](#liquibase-introduction)
-* [Why we use Liquibase SQL vs. XML vs. YAML](#why-we-use-liquibase-sql-xml-yaml)
+* [Why we use Liquibase SQL vs. XML vs. YAML](#why-we-use-liquibase-sql-vs-xml-vs-yaml)
 * [Tracking](#tracking)
 
 
-<h2><a name="schema-example-files">Schema example files</a></h2>
+## Schema example files
 
 Most popular:
   * [person.sql](person.sql)
@@ -65,7 +65,7 @@ Joins:
   * [person__event.sql](person__event.sql)
 
 
-<h2><a name="schema-conventions">Schema conventions</a></h2>
+## Schema conventions
 
 Use industry standard schemas such as the Schema.org project.
 
@@ -112,7 +112,7 @@ Use some of our notable exceptions because they are better at scale.
   * For example, we use "start" and "stop", not "begin" and "end", nor "valid from" and "valid to".
 
 
-<h2><a name="bonus-fields-for-growth">Bonus fields for growth</a></h2>
+## Bonus fields for growth
 
 
 In practice we often add some bonus fields to each table; these fields help us with the growth of the app, and also the administration of the app.
@@ -146,7 +146,7 @@ Examples:
     note longtext,          -- Typically freeform text entered by a user
 
 
-<h2><a name="liquibase-introduction">Liquibase introduction</a></h2>
+## Liquibase introduction
 
 Liquibase is an open source tool for managing database schema changes.
 
@@ -155,14 +155,14 @@ See https://en.wikipedia.org/wiki/Liquibase
 Our projects use database schema changes within source code, and within large projects, so we have schema examples here to help new projects.
 
 
-<h2><a name="why-we-use-liquibase-sql-xml-yaml">Why we use Liquibase SQL vs. XML vs. YAML</a></h2>
+## Why we use Liquibase SQL vs. XML vs. YAML
 
 Liquibase files can be written in SQL, or XML, or YAML. We prefer SQL because more database administrators know it.
 
 If you prefer XML or YAML and would like to translate our examples, then we welcome the help and also welcome pull requests.
 
 
-<h2><a name="tracking">Tracking</a></h2>
+## Tracking
 
 * Package: sixarm_sql_schema_examples
 * Version: 5.0.0
