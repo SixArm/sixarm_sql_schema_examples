@@ -35,6 +35,7 @@ Geography:
 
   * [geolocation.sql](geography/geolocation.sql)
   * [country.sql](geography/country.sql)
+  * [country_subdivision.sql](geography/country_subdivision.sql)
   * [region.sql](geography/region.sql)
   * [locality.sql](geography/locality.sql)
   * [street.sql](geography/street.sql)
@@ -99,7 +100,7 @@ Any date or time that must be local must use the "_local" suffix.
 
 Handling corner cases well is more important than saving data space.
 
-  * For example, the concepts of a "postal_region" and "country_subdivision" are nearly identical, but not quite, so we store both.
+  * For example, the concepts of a "region" and "country_subdivision" are nearly identical, but not quite, so we store both.
 
 Use typical data type default sizes.
 
