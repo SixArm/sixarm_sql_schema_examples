@@ -10,7 +10,7 @@ create table postcode (
   country_id uuid references  country, -- example: United States
   region_id uuid references region, -- example: California
   locality_id uuid references locality, -- example: San Francisco
-  name, -- example: 94101
+  code varchar, -- example: 94101
 );
 
 --rollback drop table postcode;
