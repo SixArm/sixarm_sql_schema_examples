@@ -46,6 +46,7 @@ Geography:
 Business:
 
   * [brand.sql](business/brand.sql)
+  * [currency.sql](business/currency.sql)
   * [product.sql](business/product.sql)
   * [offer.sql](business/offer.sql)
   * [market_area.sql](business/market_area.sql)
