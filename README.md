@@ -117,31 +117,43 @@ In practice we often add some bonus fields to each table; these fields help us w
 
 Examples:
 
-    zid char(36),           -- A secure random hexadecimal lowercase string,
-                            -- useful for logging and distributed applications.
 
-    lock_version int,       -- An incrementing number that an application can
-                            -- use for optimistic locking for read/write speed
+```sql
+-- We prefer using secure random 128-bit numbers as primary keys.
+-- These numbers are storable in a typical PostgreSQL UUID field.
+id uuid not null primary key,
 
-    created_by int,         -- Track who is managing this record and when,
-    created_on datetime,    -- because this information is handy in practice
-    updated_by int,         -- for diagnosing the applicaiton when it runs;
-    updated_on datetime,    -- these fields can also be handy in practice
-    deleted_by int,         -- for building apps that synchronize data
-    deleted_on datetime,    -- or use eventually-consistent databases.
+-- An incrementing number that an application can
+-- use for optimistic locking for read/write speed
+lock_version int,
 
-    type varchar             -- The "type" is a reserved word in some frameworks,
-    typed int               -- which uses the field for single-table inheritance.
+-- Track who touches the record and when,
+-- because this information helps in practice
+-- for diagnosing the application as it runs.
+created_at timestamp, created_by uuid references user,
+updated_at timestamp, updated_by uuid references user,
+proofed_at timestamp, updated_by uuid references user,
+retired_at timestamp, retired_by uuid references user,
 
-    position int            -- For a record that has a specific position within a list
+-- The field name "type" is a reserved word in some frameworks,
+-- which uses the field for single-table inheritance.
+type varchar,
 
-    parent_id int           -- For a record that has a direct parent record
+-- The field name "position" is a reserved word in some frameworks,
+-- which uses the field for ordering by position index number.
+position integer,
 
-    status_id int,          -- Typically relates to a status table suitable for the app
-    status_ie varchar,      -- Typically freeform text entered by a user 
+-- For a record that has a direct parent record
+parent_id uuid references self,
 
-    url text,               -- Typically a URL to more information about this record
-    note longtext,          -- Typically freeform text entered by a user
+-- Status table suitable for the app
+status_id uuid references status,
+status_ie varchar,
+
+-- Ways to see more about the record, such as a URL to more information, and a note of text.
+url varchar,
+note longtext,
+```
 
 
 ## Liquibase introduction
