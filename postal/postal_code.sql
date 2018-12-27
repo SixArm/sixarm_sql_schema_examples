@@ -7,10 +7,10 @@
 
 create table postal_code (
   id uuid not null primary key,
-  name,                          -- example: 94101
-  postal_locality_id uuid,        -- example: San Francisco
-  postal_region_id uuid,          -- example: California
-  country_id uuid                 -- example: United States
+  name, -- example: 94101
+  postal_locality_id uuid, -- example: San Francisco
+  postal_region_id uuid, -- example: California
+  country_id uuid -- example: United States
 );
 
 --rollback drop table postal_code;

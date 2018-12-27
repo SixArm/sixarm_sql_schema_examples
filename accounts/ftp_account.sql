@@ -8,12 +8,12 @@
 create table ftp_account (
   id uuid not null primary key,
 
-  -- User Credentials
+ -- User Credentials
   user_id uuid,  
   username varchar,
   password varchar,
 
-  -- FTP Server
+ -- FTP Server
   host varchar,
   port integer,
   use_ssl boolean

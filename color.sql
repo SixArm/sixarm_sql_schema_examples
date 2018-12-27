@@ -10,10 +10,10 @@ create table color (
   name_as_en varchar, -- example: "red"
   name_as_es varchar, -- example: "rojo"
   name_as_fr varchar, -- example: "rouge"
-  hex char(6),         -- example: ff0000
-  rgb_r smallint(2),   -- example: 255
-  rgb_g smallint(2),   -- example: 0
-  rgb_b smallint(2),   -- example: 0
+  hex char(6), -- example: ff0000
+  rgb_r smallint(2), -- example: 255
+  rgb_g smallint(2), -- example: 0
+  rgb_b smallint(2), -- example: 0
 );
 
 --rollback drop table color;

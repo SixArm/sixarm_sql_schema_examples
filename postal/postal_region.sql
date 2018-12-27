@@ -7,9 +7,9 @@
 
 create table postal_region (
   id uuid not null primary key,
-  name varchar,                  -- example: California
-  name_as_en varchar,               -- example: California
-  country_id uuid                 -- example: United States
+  name varchar, -- example: California
+  name_as_en varchar, -- example: California
+  country_id uuid -- example: United States
 );
 
 --rollback drop table postal_region;

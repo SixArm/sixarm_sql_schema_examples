@@ -7,13 +7,13 @@
 
 create table thing (
   id uuid not null primary key,
-  name_as_en varchar,         -- example: "apple"
-  name_as_as varchar,         -- example "manzana"
-  name_as_fr varchar,         -- example: "pomme"
-  description_as_en varchar,  -- example: "An apple is a fruit"
-  description_as_es varchar,  -- example: "Una manzana es una fruta"
-  description_as_fr varchar,  -- example: "Une pomme est un fruit"
-  image_url text,             -- example: http://example.com/image.png
+  name_as_en varchar, -- example: "apple"
+  name_as_as varchar, -- example "manzana"
+  name_as_fr varchar, -- example: "pomme"
+  description_as_en varchar, -- example: "An apple is a fruit"
+  description_as_es varchar, -- example: "Una manzana es una fruta"
+  description_as_fr varchar, -- example: "Une pomme est un fruit"
+  image_url text, -- example: http://example.com/image.png
 );
 
 --rollback drop table thing;

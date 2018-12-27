@@ -10,12 +10,12 @@ create table postal_address (
   name_as_en varchar, -- example: "Acme Company"
   name_as_es varchar, -- example: "Acme Empressa"
   name_as_fr varchar, -- example: "Acme Entreprise"
-  street_address varchar,        -- example: 123 Main Street
-  postal_box_number varchar,     -- example: 12345
-  postal_code_id uuid,            -- example: 94101
-  postal_locality_id uuid,        -- example: San Francisco
-  postal_region_id uuid,          -- example: California
-  country_id uuid                 -- example: United States
+  street_address varchar, -- example: 123 Main Street
+  postal_box_number varchar, -- example: 12345
+  postal_code_id uuid, -- example: 94101
+  postal_locality_id uuid, -- example: San Francisco
+  postal_region_id uuid, -- example: California
+  country_id uuid -- example: United States
 );
 
 --rollback drop table postal_address;

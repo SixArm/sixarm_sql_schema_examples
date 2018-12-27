@@ -7,11 +7,11 @@
 
 create table postal_locality (
   id uuid not null primary key,
-  name_as_en varchar,             -- example: "San Francisco"
-  name_as_es varchar,             -- example: "San Francisco"
-  name_as_fr varchar,             -- example: "Saint François"
-  postal_region_id uuid,          -- example: California
-  country_id uuid                 -- example: United States
+  name_as_en varchar, -- example: "San Francisco"
+  name_as_es varchar, -- example: "San Francisco"
+  name_as_fr varchar, -- example: "Saint François"
+  postal_region_id uuid, -- example: California
+  country_id uuid -- example: United States
 );
 
 --rollback drop table postal_locality;
