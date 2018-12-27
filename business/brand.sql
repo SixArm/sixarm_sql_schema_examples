@@ -7,7 +7,7 @@
 
 create table brand (
   id int not null primary key,
-  name varchar(255) -- example: Acme Brand
+  name varchar -- example: Acme Brand
 
 );
 

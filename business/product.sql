@@ -7,9 +7,9 @@
 
 create table product (
   id int not null primary key,
-  name_en varchar(20), -- example: hammer
-  name_fr varchar(20), -- example: marteau
-  sku varchar(255),    -- Stock Keeping Unit; example: part-1234
+  name_en varchar, -- example: hammer
+  name_fr varchar, -- example: marteau
+  sku varchar,    -- Stock Keeping Unit; example: part-1234
   brand_id int,        -- example: Acme Brand
   manufacturer_id int, -- example: Acme; relate to organization
   height float,

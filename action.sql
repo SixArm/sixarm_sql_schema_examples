@@ -7,8 +7,8 @@
 
 create table action ( --see https://schema.org/Action
   id int not null primary key,
-  name_en varchar(20), -- example: sing at a music concert
-  name_fr varchar(20), -- example: chanter à concert de musique
+  name_en varchar, -- example: sing at a music concert
+  name_fr varchar, -- example: chanter à concert de musique
   start,               -- example: 2000-01-01T12:00:00Z
   stop,                -- example: 2000-01-02T12:00:00Z
   agent_person_id int,

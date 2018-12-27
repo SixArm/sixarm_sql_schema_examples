@@ -7,7 +7,7 @@
 
 create table access_operation (
   id int not null primary key,
-  name varchar(255) -- example: create item
+  name varchar -- example: create item
 );
 
 --rollback drop table access_operation;

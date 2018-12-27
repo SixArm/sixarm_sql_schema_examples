@@ -7,8 +7,8 @@
 
 create table postal_region (
   id int not null primary key,
-  name varchar(255),                  -- example: California
-  name_en varchar(255),               -- example: California
+  name varchar,                  -- example: California
+  name_en varchar,               -- example: California
   country_id int                 -- example: United States
 );
 

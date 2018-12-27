@@ -7,7 +7,7 @@
 
 create table org (
   id int not null primary key,
-  name varchar(255) -- example: Acme
+  name varchar55) -- example: Acme
 );
 
 --rollback drop table org;

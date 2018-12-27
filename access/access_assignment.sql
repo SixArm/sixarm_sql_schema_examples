@@ -7,7 +7,7 @@
 
 create table access_assignment (
   id int not null primary key,
-  name varchar(255),       -- example: Alice is an Administrator
+  name varchar,       -- example: Alice is an Administrator
   person_id int,           -- example: Alice
   access_role_id int       -- example: Administrator
 );

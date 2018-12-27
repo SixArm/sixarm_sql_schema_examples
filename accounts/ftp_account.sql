@@ -10,11 +10,11 @@ create table ftp_account (
 
   -- User Credentials
   user_id int,  
-  username varchar(255),
-  password varchar(255),
+  username varchar,
+  password varchar,
 
   -- FTP Server
-  host varchar(255),
+  host varchar,
   port integer,
   use_ssl boolean
 );

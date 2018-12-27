@@ -7,7 +7,7 @@
 
 create table access_role (
   id int not null primary key,
-  name varchar(255) -- example: administrator
+  name varchar -- example: administrator
 );
 
 --rollback drop table access_role;

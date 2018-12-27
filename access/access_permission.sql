@@ -7,7 +7,7 @@
 
 create table access_permission (
   id int not null primary key,
-  name varchar(255),        -- example: administrator can create item
+  name varchar,        -- example: administrator can create item
   access_role_id int,       -- example: administrator
   access_operation_id int   -- example: create item
 );

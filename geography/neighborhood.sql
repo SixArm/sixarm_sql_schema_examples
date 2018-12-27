@@ -7,8 +7,8 @@
 
 create table neighborhood (
   id int not null primary key,
-  name_en varchar(255),               -- example: Mission district
-  name_fr varchar(255),               -- example: Le district Mission
+  name_en varchar,               -- example: Mission district
+  name_fr varchar,               -- example: Le district Mission
   postal_locality_id int,        -- example: San Francisco
   postal_region_id int,          -- example: California
   country_subdivision_id int,    -- example: California

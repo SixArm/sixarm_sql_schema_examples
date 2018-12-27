@@ -10,18 +10,18 @@ create table pop_account (
 
   -- User Credentials
   user_id int,  
-  email_address varchar(255),
-  username varchar(255),
-  password varchar(255),
+  email_address varchar,
+  username varchar,
+  password varchar,
 
   -- Inbound Mail Server (POP)
-  inbound_mail_host varchar(255),
+  inbound_mail_host varchar,
   inbound_mail_port integer,
   inbound_mail_port_for_ssl integer,
   inbound_mail_use_ssl boolean,
 
   -- Outbound Mail Server (SMTP)
-  outbound_mail_host varchar(255),
+  outbound_mail_host varchar,
   outbound_mail_port integer,
   outbound_mail_port_for_ssl integer,
   outbound_mail_port_for_tls integer,

@@ -7,8 +7,8 @@
 
 create table market_area (
   id int not null primary key,
-  name_en varchar(255),               -- example: San Francisco Bay Area Region
-  name_fr varchar(255),               -- example: Région de la baie de San Francisco
+  name_en varchar,               -- example: San Francisco Bay Area Region
+  name_fr varchar,               -- example: Région de la baie de San Francisco
   rank int,                      -- example: 3
 );
 

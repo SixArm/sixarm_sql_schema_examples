@@ -7,7 +7,7 @@
 
 create table place (
   id int not null primary key,
-  name varchar(255) -- example: Golden Gate Park
+  name varchar55) -- example: Golden Gate Park
 
 );
 
