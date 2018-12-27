@@ -9,7 +9,7 @@ create table ftp_account (
   id uuid not null primary key,
 
  -- User Credentials
-  user_id uuid,  
+  user_id uuid references user, -- example: "Alice"  
   username varchar,
   password varchar,
 

@@ -7,8 +7,8 @@
 
 create table access_permission (
   id uuid not null primary key,
-  access_role_id uuid, -- example: administrator
-  access_operation_id uuid, -- example: create item
+  access_attribute_id uuid references access_attribute, -- example: administrator
+  access_operation_id uuid references access_operation, -- example: create item
   name_as_en varchar unique, -- example: "administrator can create item"
   name_as_es varchar unique, -- example: administrador puede crear ít"
   name_as_fr varchar unique -- example: "administrateur pouvez créer article"

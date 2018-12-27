@@ -11,13 +11,13 @@ create table product (
   name_as_es varchar, -- example: "martillo"
   name_as_fr varchar, -- example: "marteau"
   sku varchar, -- Stock Keeping Unit; example: part-1234
-  brand_id uuid, -- example: Acme Brand
-  manufacturer_id uuid, -- example: Acme; relate to organization
+  brand_id uuid references brand, -- example: Acme Brand
+  manufacturer_id uuid references organization, -- example: Acme
   height float,
   width float,
   depth float,
   weight float,
-  color_id uuid,
+  color_id uuid references color, -- example: red
  -- Global Trade Item Number (GTIN)
   gtin8 char(8), -- The GTIN-8 code
   gtin12 char(12), -- The GTIN-12 code

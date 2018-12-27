@@ -12,9 +12,9 @@ create table offer (
   name_as_fr varchar, -- example: "Acheter un en obtenir un gratuitement"
   start datetime, -- example: 2000-01-01T12:00:00; a.k.a. valid from
   stop  datetime, -- example: 2000-01-01T12:00:00; a.k.a. valid through
-  organization_id uuid, -- example: Acme
-  brand_id uuid, -- example: Acme Brand
-  product_id uuid -- example: Acme Brand Hammer
+  organization_id uuid references organization, -- example: Acme
+  brand_id uuid references brand, -- example: Acme Brand
+  product_id uuid references product -- example: Acme Brand Hammer
 );
 
 --rollback drop table offer;

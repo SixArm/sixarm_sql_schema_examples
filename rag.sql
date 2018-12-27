@@ -7,7 +7,7 @@
 
 create table rag (
   id uuid not null primary key,
-  color_id uuid, -- example: red
+  color_id uuid references color, -- example: red
 );
 
 --rollback drop table rag;

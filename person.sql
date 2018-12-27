@@ -18,8 +18,8 @@ create table person (
   additional_name_as_fr varchar, -- example: Aimée
   height float, -- example: 1.65 meters
   weight float, -- example: 70000 grams 
-  geolocation_id uuid, -- example: where the person is now
-  lifespan_id uuid, -- example: birth date is 2000-01-01
+  geolocation_id uuid references , -- example: where the person is now
+  lifespan_id uuid references , -- example: birth date is 2000-01-01
 );
 
 --rollback drop table person;

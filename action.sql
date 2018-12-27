@@ -12,8 +12,8 @@ create table action ( --see https://schema.org/Action
   name_as_fr varchar, -- example: "chanter à concert de musique"
   start, -- example: 2000-01-01T12:00:00Z
   stop, -- example: 2000-01-02T12:00:00Z
-  agent_person_id uuid,
-  agent_organization_id uuid, 
+  agent_person_id uuid references person, -- example: Alice
+  agent_org_id uuid references org, --  example: Acme
 );
 
 --rollback drop table action;

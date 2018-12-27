@@ -7,7 +7,7 @@
 
 create table country_subdivision (
   id uuid not null primary key,
-  country_id uuid, -- example: United States
+  country_id uuid references country, -- example: United States
   name_as_en varchar, -- example: California
   name_as_es varchar, -- example: California
   name_as_fr varchar, -- example: California

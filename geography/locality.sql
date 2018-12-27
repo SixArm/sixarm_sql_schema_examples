@@ -7,11 +7,11 @@
 
 create table locality (
   id uuid not null primary key,
+  country_id uuid references country, -- example: United States
+  region_id uuid references region, -- example: California
   name_as_en varchar, -- example: "San Francisco"
   name_as_es varchar, -- example: "San Francisco"
-  name_as_fr varchar, -- example: "Saint François"
-  postal_region_id uuid, -- example: California
-  country_id uuid -- example: United States
+  name_as_fr varchar -- example: "Saint François"
 );
 
 --rollback drop table locality;

@@ -9,7 +9,7 @@ create table pop_account (
   id uuid not null primary key,
 
  -- User Credentials
-  user_id uuid,  
+  user_id uuid references user, --example: "Alice"  
   email_address varchar,
   username varchar,
   password varchar,

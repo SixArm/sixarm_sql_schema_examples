@@ -7,8 +7,8 @@
 
 create table access_assignment (
   id uuid not null primary key,
-  person_id uuid, -- example: Alice
-  access_role_id uuid, -- example: Administrator
+  person_id uuid references person, -- example: Alice
+  access_role_id uuid references access_role, -- example: Administrator
   name_as_en varchar unique, -- example: "administrator can create item"
   name_as_es varchar unique, -- example: administrador puede crear ít"
   name_as_fr varchar unique -- example: "administrateur pouvez créer article"

@@ -7,15 +7,15 @@
 
 create table postal_address (
   id uuid not null primary key,
+  country_id uuid references country, -- example: United States
+  postal_region_id uuid references region, -- example: California
+  locality_id uuid references locality, -- example: San Francisco
+  postcode_id uuid references postcode, -- example: 94101
   name_as_en varchar, -- example: "Acme Company"
   name_as_es varchar, -- example: "Acme Empressa"
   name_as_fr varchar, -- example: "Acme Entreprise"
   street_address varchar, -- example: 123 Main Street
-  postal_box_number varchar, -- example: 12345
-  postcode_id uuid, -- example: 94101
-  locality_id uuid, -- example: San Francisco
-  postal_region_id uuid, -- example: California
-  country_id uuid -- example: United States
+  postal_box_number varchar -- example: 12345
 );
 
 --rollback drop table postal_address;
