@@ -7,6 +7,7 @@
 
 create table postcode (
   id uuid not null primary key,
+  geolocation_id uuid references geolocation, -- example: center point of area
   country_id uuid references  country, -- example: United States
   region_id uuid references region, -- example: California
   locality_id uuid references locality, -- example: San Francisco

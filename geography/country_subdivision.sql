@@ -7,6 +7,7 @@
 
 create table country_subdivision (
   id uuid not null primary key,
+  geolocation_id uuid references geolocation, -- example: center point of area
   country_id uuid references country, -- example: United States
   name_as_en varchar, -- example: California
   name_as_es varchar, -- example: California

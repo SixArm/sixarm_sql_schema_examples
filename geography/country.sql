@@ -7,6 +7,7 @@
 
 create table country (
   id uuid not null primary key,
+  geolocation_id uuid references geolocation, -- example: center point of area
   name_as_en varchar, -- example: United States
   name_as_es varchar, -- example: Estados Unidos
   name_as_fr varchar, -- example: États Unis

@@ -7,6 +7,7 @@
 
 create table street (
   id uuid not null primary key,
+  geolocation_id uuid references geolocation, -- example: center point of area
   country_id uuid references country, -- example: country "United States"
   region_id uuid references region, -- example: region "California"
   locality_id uuid references locality, -- example: locality "San Francisco"
