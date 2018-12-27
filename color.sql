@@ -7,9 +7,9 @@
 
 create table color (
   id uuid not null primary key,
-  name_as_en varchar, -- example: "red"
-  name_as_es varchar, -- example: "rojo"
-  name_as_fr varchar, -- example: "rouge"
+  name_as_en varchar, -- example: red
+  name_as_es varchar, -- example: rojo
+  name_as_fr varchar, -- example: rouge
   hex char(6), -- example: ff0000
   rgb_r smallint(2), -- example: 255
   rgb_g smallint(2), -- example: 0

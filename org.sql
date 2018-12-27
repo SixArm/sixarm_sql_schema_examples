@@ -7,9 +7,9 @@
 
 create table org (
   id uuid not null primary key,
-  name_as_en varchar, -- example: "Acme Company"
-  name_as_es varchar, -- example: "Acme Empressa"
-  name_as_fr varchar -- example: "Acme Entreprise"
+  name_as_en varchar, -- example: Acme Company
+  name_as_es varchar, -- example: Acme Empressa
+  name_as_fr varchar -- example: Acme Entreprise
 );
 
 --rollback drop table org;

@@ -8,7 +8,7 @@
 create table tag (
   id uuid not null primary key,
   name_as_en varchar, -- example: hot
-  name_as_es varchar, -- example: "caliente"
+  name_as_es varchar, -- example: caliente
   name_as_fr varchar -- example: chaud
 );
 

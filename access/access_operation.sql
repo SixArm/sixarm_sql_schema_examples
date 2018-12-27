@@ -7,9 +7,9 @@
 
 create table access_operation (
   id uuid not null primary key,
-  name_as_en varchar unique, -- example: "create item"
-  name_as_es varchar unique, -- example: "crear ít"
-  name_as_fr varchar unique -- example: "créer article"
+  name_as_en varchar unique, -- example: create item
+  name_as_es varchar unique, -- example: crear ít
+  name_as_fr varchar unique -- example: créer article
 );
 
 --rollback drop table access_operation;

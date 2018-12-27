@@ -11,9 +11,9 @@ create table street (
   region_id uuid references region, -- example: region "California"
   locality_id uuid references locality, -- example: locality "San Francisco"
   postcode_id uuid references postcode, -- example: locality "94101"
-  name_as_en varchar, -- example: "Main Street"
-  name_as_es varchar, -- example: "Calle Principal"
-  name_as_fr varchar -- example: "Rue Principale"
+  name_as_en varchar, -- example: Main Street
+  name_as_es varchar, -- example: Calle Principal
+  name_as_fr varchar -- example: Rue Principale
 );
 
 --rollback drop table street;

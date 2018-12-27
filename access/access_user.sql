@@ -7,9 +7,9 @@
 
 create table access_user (
   id uuid not null primary key,
-  name_as_en varchar, -- example: "Alice"
-  name_as_es varchar, -- example: "Alicia"
-  name_as_fr varchar -- example: "Aalis"
+  name_as_en varchar, -- example: Alice
+  name_as_es varchar, -- example: Alicia
+  name_as_fr varchar -- example: Aalis
 );
 
 --rollback drop table access_user;
