@@ -3,7 +3,7 @@
 --see https://github.com/sixarm/sixarm_rails_engine_for_contacts
 
 --changeset sixarm@sixarm.com:1
-create table email_pop_account (
+create table pop_account (
   id int not null primary key,
 
   -- User Credentials
@@ -28,4 +28,4 @@ create table email_pop_account (
   outbound_mail_use_tls boolean,
 
 );
---rollback drop table email_pop_account;
+--rollback drop table pop_account;

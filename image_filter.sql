@@ -3,7 +3,7 @@
 --see ImageMagick convert function paramters
 
 --changeset sixarm@sixarm.com:1
-create table imagemagick_filter (
+create table image_filter (
   id int not null primary key,
   name_en varchar(255),         -- example: Shrink to fit
   name_fr varchar(255),         -- example: ?
@@ -15,4 +15,4 @@ create table imagemagick_filter (
   bytes_max int(11) unsigned,   -- upper limit of byte count
   dpi int(10) unsigned,         -- dots per inch
 );
---rollback drop table imagemagick_filter;
+--rollback drop table image_filter;

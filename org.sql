@@ -3,8 +3,8 @@
 --see https://schema.org/Organization
 
 --changeset sixarm@sixarm.com:1
-create table organization (
+create table org (
   id int not null primary key,
   name varchar(255) -- example: Acme
 );
---rollback drop table organization;
+--rollback drop table org;

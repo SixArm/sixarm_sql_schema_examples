@@ -1,4 +1,6 @@
-# SixArm » SQL » Schema examples
+# SixArm → SQL → Schema examples
+
+Contents:
 
 * [Schema example files here](#schema-example-files-here)
 * [Schema conventions](#schema-conventions)
@@ -11,58 +13,54 @@
 ## Schema example files
 
 Most popular:
+
   * [person.sql](person.sql)
   * [place.sql](place.sql)
   * [thing.sql](thing.sql)
+  * [org.sql](org.sql)
   * [event.sql](event.sql)
   * [action.sql](action.sql)
   * [tag.sql](tag.sql)
   * [color.sql](color.sql)
 
-Organization:
-  * [organization.sql](organization.sql)
-  * [organization__person.sql](organization__person.sql)
-
 Access control:
-  * [access_role.sql](access_role.sql)
-  * [access_assigment.sql](access_assignment.sql)
-  * [access_operation.sql](access_operation.sql)
-  * [access_permission.sql](access_permission.sql)
+
+  * [access_role.sql](access/access_role.sql)
+  * [access_assigment.sql](access/access_assignment.sql)
+  * [access_operation.sql](access/access_operation.sql)
+  * [access_permission.sql](access/access_permission.sql)
 
 Geography:
-  * [geolocation.sql](geolocation.sql)
-  * [country.sql](country.sql)
-  * [country_subdivision.sql](country_subdivision.sql)
-  * [neighborhood.sql](neighborhood.sql)
+
+  * [geolocation.sql](geography/geolocation.sql)
+  * [country.sql](geography/country.sql)
+  * [country_subdivision.sql](geography/country_subdivision.sql)
+  * [neighborhood.sql](geography/neighborhood.sql)
 
 Postal:
-  * [postal_address.sql](postal_address.sql)
-  * [postal_code.sql](postal_code.sql)
-  * [postal_locality.sql](postal_locality.sql)
-  * [postal_region.sql](postal_region.sql)
+  * [postal_address.sql](postal/postal_address.sql)
+  * [postal_code.sql](postal/postal_code.sql)
+  * [postal_locality.sql](postal/postal_locality.sql)
+  * [postal_region.sql](postal/postal_region.sql)
 
 Business:
-  * [brand.sql](brand.sql)
-  * [product.sql](product.sql)
-  * [service.sql](service.sql)
-  * [offer.sql](offer.sql)
-  * [market_area.sql](market_area.sql)
-  * [market_sector.sql](market_sector.sql)
 
-Network:
-  * [email_pop_account.sql](email_pop_account.sql)
-  * [ftp_account.sql](ftp_account.sql)
+  * [brand.sql](business/brand.sql)
+  * [product.sql](business/product.sql)
+  * [offer.sql](business/offer.sql)
+  * [market_area.sql](business/market_area.sql)
+  * [market_sector.sql](business/market_sector.sql)
+
+Accounts:
+
+  * [pop_account.sql](accounts/pop_account.sql)
+  * [ftp_account.sql](accounts/ftp_account.sql)
 
 Misc:
-  * [rag.sql](rag.sql)
-  * [imagemagick_filter.sql](imagemagick_filter.sql)
-  * [lifespan.sql](lifespan.sql)
 
-Joins:
-  * [brand__market_sector.sql](brand__sector.sql)
-  * [brand__organization.sql](brand__organization.sql)
-  * [place__event.sql](place__event.sql)
-  * [person__event.sql](person__event.sql)
+  * [rag.sql](rag.sql)
+  * [image_filter.sql](image_filter.sql)
+  * [lifespan.sql](lifespan.sql)
 
 
 ## Schema conventions
@@ -167,6 +165,6 @@ If you prefer XML or YAML and would like to translate our examples, then we welc
 * Package: sixarm_sql_schema_examples
 * Version: 5.0.0
 * Created: 1996-01-01
-* Updated: 2016-10-30
+* Updated: 2018-12-28
 * License: BSD, MIT, GPL
 * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
