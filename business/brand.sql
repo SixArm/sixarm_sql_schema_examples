@@ -7,8 +7,9 @@
 
 create table brand (
   id uuid not null primary key,
-  name varchar -- example: Acme Brand
-
+  name_as_en varchar, -- example: "Acme brand"
+  name_as_es varchar, -- example: "Acme marca"
+  name_as_fr varchar -- example: "Acme marque"
 );
 
 --rollback drop table brand;

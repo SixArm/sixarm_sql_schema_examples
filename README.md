@@ -103,7 +103,7 @@ Handling corner cases well is more important than saving data space.
 
 Use typical data type default sizes.
 
-  * For example, we use the data type "varchar(255)" as a default, when we don't know a text field will be somewhat short.
+  * For example, we use the data type "varchar" as a default, when we don't know a text field will be somewhat short.
 
 Use some of our notable exceptions because they are better at scale.
 
@@ -130,7 +130,7 @@ Examples:
     deleted_by int,         -- for building apps that synchronize data
     deleted_on datetime,    -- or use eventually-consistent databases.
 
-    type varchar(255)       -- The "type" is a reserved word in some frameworks,
+    type varchar             -- The "type" is a reserved word in some frameworks,
     typed int               -- which uses the field for single-table inheritance.
 
     position int            -- For a record that has a specific position within a list
@@ -138,7 +138,7 @@ Examples:
     parent_id int           -- For a record that has a direct parent record
 
     status_id int,          -- Typically relates to a status table suitable for the app
-    status_ie varchar(255), -- Typically freeform text entered by a user 
+    status_ie varchar,      -- Typically freeform text entered by a user 
 
     url text,               -- Typically a URL to more information about this record
     note longtext,          -- Typically freeform text entered by a user

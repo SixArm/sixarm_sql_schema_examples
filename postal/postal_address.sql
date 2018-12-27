@@ -7,7 +7,9 @@
 
 create table postal_address (
   id uuid not null primary key,
-  name varchar,                  -- example: Acme Company
+  name_as_en varchar, -- example: "Acme Company"
+  name_as_es varchar, -- example: "Acme Empressa"
+  name_as_fr varchar, -- example: "Acme Entreprise"
   street_address varchar,        -- example: 123 Main Street
   postal_box_number varchar,     -- example: 12345
   postal_code_id uuid,            -- example: 94101

@@ -7,9 +7,10 @@
 
 create table product (
   id uuid not null primary key,
-  name_as_en varchar, -- example: hammer
-  name_as_fr varchar, -- example: marteau
-  sku varchar,    -- Stock Keeping Unit; example: part-1234
+  name_as_en varchar, -- example: "hammer"
+  name_as_es varchar, -- example: "martillo"
+  name_as_fr varchar, -- example: "marteau"
+  sku varchar,          -- Stock Keeping Unit; example: part-1234
   brand_id uuid,        -- example: Acme Brand
   manufacturer_id uuid, -- example: Acme; relate to organization
   height float,

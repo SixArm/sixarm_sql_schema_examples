@@ -7,8 +7,9 @@
 
 create table image_filter ( --see ImageMagick image filter convert function paramters
   id uuid not null primary key,
-  name_as_en varchar55),         -- example: Shrink to fit
-  name_as_fr varchar55),         -- example: ?
+  name_as_en varchar,         -- example: Shrink to fit
+  name_as_es varchar,         -- example: "encogerse para encajar"
+  name_as_fr varchar,         -- example: "rétrécir pour s'adapter"
   geometry_x int unsigned,      -- the x width in pixels
   geometry_y int unsigned,      -- the y height in pixels
   quality_jpg int unsigned, 
