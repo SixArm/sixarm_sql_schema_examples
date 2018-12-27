@@ -7,10 +7,11 @@
 
 create table country_subdivision (
   id uuid not null primary key,
+  country_id uuid, -- example: United States
   name_as_en varchar, -- example: California
-  name_as_fr varchar, -- example: Californie
-  iso_code char(5), -- ISO 3166-2 code; example: US-CA
-  country_id uuid -- example: United States
+  name_as_es varchar, -- example: California
+  name_as_fr varchar, -- example: California
+  iso_code char(5) -- ISO 3166-2 code; example: US-CA
 );
 
 --rollback drop table country_subdivision;
