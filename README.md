@@ -40,8 +40,6 @@ Geography:
   * [street.sql](geography/street.sql)
   * [neighborhood.sql](geography/neighborhood.sql)
   * [postcode.sql](geography/postcode.sql)
-
-Postal:
   * [postal_address.sql](postal/postal_address.sql)
 
 Business:
