@@ -35,13 +35,14 @@ Geography:
   * [geolocation.sql](geography/geolocation.sql)
   * [country.sql](geography/country.sql)
   * [country_subdivision.sql](geography/country_subdivision.sql)
+  * [locality.sql](geography/locality.sql)
+  * [region.sql](geography/region.sql)
+  * [street.sql](geography/street.sql)
   * [neighborhood.sql](geography/neighborhood.sql)
+  * [postcode.sql](geography/postcode.sql)
 
 Postal:
   * [postal_address.sql](postal/postal_address.sql)
-  * [postal_code.sql](postal/postal_code.sql)
-  * [postal_locality.sql](postal/postal_locality.sql)
-  * [postal_region.sql](postal/postal_region.sql)
 
 Business:
 
