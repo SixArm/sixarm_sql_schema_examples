@@ -5,7 +5,8 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'currency'
 
--- Currency (http://schema.org/currency)
+-- Currency 
+-- http://schema.org/currency
 --
 -- Use standard formats:
 --
@@ -16,7 +17,7 @@
 --   * Well known names for Local Exchange Tradings Systems (LETS).
 --
 --   * Well known names for other currency types e.g. "Ithaca HOUR".
-
+--
 create table currency (
   id uuid not null primary key,
   name_as_en varchar, -- example: "United States dollars"

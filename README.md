@@ -47,10 +47,13 @@ Business:
 
   * [brand.sql](business/brand.sql)
   * [currency.sql](business/currency.sql)
-  * [product.sql](business/product.sql)
-  * [offer.sql](business/offer.sql)
+  * [currency.sql](business/currency_pair.sql)
   * [market_area.sql](business/market_area.sql)
   * [market_sector.sql](business/market_sector.sql)
+  * [monetary_value.sql](business/monetary_value_.sql)
+  * [monetary_range.sql](business/monetary_range.sql)
+  * [offer.sql](business/offer.sql)
+  * [product.sql](business/product.sql)
 
 Accounts:
 
