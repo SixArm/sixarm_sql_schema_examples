@@ -107,7 +107,7 @@ Use typical data type default sizes.
 
 Use some of our notable exceptions because they are better at scale.
 
-  * For example, we use "start" and "stop", not "begin" and "end", nor "valid from" and "valid to".
+  * For example, for range naming we use "start" and "stop", not "begin" and "end", nor "from" and "to".
 
 
 ## Bonus fields for growth

@@ -10,8 +10,8 @@ create table action ( --see https://schema.org/Action
   name_as_en varchar, -- example: "sing at a music concert"
   name_as_as varchar, -- example "cantar en un concierto de musica"
   name_as_fr varchar, -- example: "chanter à concert de musique"
-  start, -- example: 2000-01-01T12:00:00Z
-  stop, -- example: 2000-01-02T12:00:00Z
+  start_when timestamp, -- example: 2000-01-01T12:00:00Z
+  stop_when timestamp, -- example: 2000-01-02T12:00:00Z
   agent_person_id uuid references person, -- example: Alice
   agent_org_id uuid references org, --  example: Acme
 );
