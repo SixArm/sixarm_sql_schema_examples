@@ -7,8 +7,8 @@
 
 create table tag (
   id uuid not null primary key,
-  name_en varchar55),         -- example: hot
-  name_fr varchar55),         -- example: chaud
+  name_as_en varchar55),         -- example: hot
+  name_as_fr varchar55),         -- example: chaud
 );
 
 --rollback drop table tag;

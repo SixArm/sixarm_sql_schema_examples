@@ -7,8 +7,8 @@
 
 create table market_sector (
   id uuid not null primary key,
-  name_en varchar,               -- example: energy
-  name_fr varchar                -- example: énergie
+  name_as_en varchar,               -- example: energy
+  name_as_fr varchar                -- example: énergie
 );
 
 --rollback drop table market_sector;

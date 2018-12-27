@@ -79,7 +79,7 @@ Use a table name that is singular, not plural.
 
 Use a language code suffix when a text field could be different in different languages.
 
-  * For example, a person's name in English is "Amy" and in French is "Aimée", so use fields "name_en" and "name_fr".
+  * For example, a person's name in English is "Amy" and in French is "Aimée", so use fields "name_as_en" and "name_as_fr".
 
 If a field can be a relation or freeform text, use two fields, one with suffix "_id" and one with suffix "_ie" meaning "I.e., in other words".
 

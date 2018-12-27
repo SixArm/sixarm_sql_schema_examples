@@ -7,8 +7,8 @@
 
 create table product (
   id uuid not null primary key,
-  name_en varchar, -- example: hammer
-  name_fr varchar, -- example: marteau
+  name_as_en varchar, -- example: hammer
+  name_as_fr varchar, -- example: marteau
   sku varchar,    -- Stock Keeping Unit; example: part-1234
   brand_id uuid,        -- example: Acme Brand
   manufacturer_id uuid, -- example: Acme; relate to organization
