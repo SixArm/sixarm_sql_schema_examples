@@ -88,13 +88,13 @@ If a field can be a relation or freeform text, use two fields, one with suffix "
 
 Use denormalization if it's likely to speed up typical usage.
 
-  * For example, some tables duplicate the "postal_code" field, because many of our apps use it to speed up local search.
+  * For example, some tables duplicate the "postcode" field, because many of our apps use it to speed up local search.
 
 Use dates formats and time formats that are consistent with ISO standard formats.
 
-  * For example, the format is Year-Month-Day and Hour:Minute:Second and Zulu time zone, such as "YYYY-MM-DDTHH:MM:SSZ".
+  * For example, the timestamp display format is Year-Month-Day and Hour:Minute:Second and Zulu time zone, such as "YYYY-MM-DDTHH:MM:SSZ"
 
-Any date or time that must be local must use the "_local" suffix.
+Any date or time field that is representing local time must use the "_local" suffix.
 
   * For example, the "person" table has the "birth_date_local" field because we care about the person's local date birthday, not Zulu date birthday.
 
@@ -173,11 +173,33 @@ Liquibase files can be written in SQL, or XML, or YAML. We prefer SQL because mo
 If you prefer XML or YAML and would like to translate our examples, then we welcome the help and also welcome pull requests.
 
 
+## Conventions
+
+We use conventions for our databases and SQL that are our preferences. You may want to edit the files here for your own preferences.
+
+* We prefer singular table names, rather than plural table names. For example, we prefer the table name "item" rather than the table name "items".
+
+* We prefer lowercase SQL, rather than uppercase SQL. For example, we prefer "create table" rather than "CREATE TABLE".
+
+
+## Languages
+
+We prefer to work with multiple languages. For example, we often use English, Spanish, Chinese, and many other languages.
+
+We use a naming convention of "{field}_as_{language}" such as "name_as_en" that means "the name as English", "name_as_es"
+
+For the example files here, we list English and Spanish, so you can see how multiple languages can work.
+
+You can add more languages if you want.
+
+Some developers prefer different ways of handling languages, naming, internationalization, and localization. You can customize the files as you like for your goals.
+
+
 ## Tracking
 
 * Package: sixarm_sql_schema_examples
-* Version: 5.0.0
+* Version: 6.0.0
 * Created: 1996-01-01
-* Updated: 2018-12-28
+* Updated: 2019-01-01
 * License: BSD, MIT, GPL
-* Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+* Contact: Joel Parker Henderson (http://joelparkerhenderson.com)
