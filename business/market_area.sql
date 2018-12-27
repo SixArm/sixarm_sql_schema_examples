@@ -10,7 +10,6 @@ create table market_area (
   name_as_en varchar, -- example: San Francisco Bay Area Region
   name_as_es varchar, -- exmaple: "Región de la Bahía de San Francisco"
   name_as_fr varchar, -- example: Région de la baie de San Francisco
-  rank int, -- example: 3
 );
 
 --rollback drop table market_area;
