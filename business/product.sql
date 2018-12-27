@@ -1,8 +1,10 @@
 --liquibase formatted sql
 --see http://www.liquibase.org/
---see https://schema.org/Product
 
 --changeset sixarm@sixarm.com:1
+--preconditions onFail:HALT onError:HALT
+--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'product'
+
 create table product (
   id int not null primary key,
   name_en varchar(20), -- example: hammer
@@ -21,4 +23,5 @@ create table product (
   gtin13 char(13),    -- The GTIN-13 code
   gtin14 char(14),    -- The GTIN-14 code
 );
+
 --rollback drop table product;

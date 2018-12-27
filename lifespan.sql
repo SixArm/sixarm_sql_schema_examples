@@ -1,8 +1,10 @@
 --liquibase formatted sql
 --see http://www.liquibase.org/
---see https://schema.org/Person
 
 --changeset sixarm@sixarm.com:1
+--preconditions onFail:HALT onError:HALT
+--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'lifespan'
+
 create table lifespan (
   id int not null primary key,
   birth_date_local date,         -- example: 2000-01-01
@@ -14,4 +16,5 @@ create table lifespan (
   death_datetime_local datetime, -- example: 2000-01-01T12:00:00 Pacific
   death_place_id,                -- example: San Francisco General Hospital
 );
+
 --rollback drop table lifespan;

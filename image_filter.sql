@@ -1,9 +1,11 @@
 --liquibase formatted sql
 --see http://www.liquibase.org/
---see ImageMagick convert function paramters
 
 --changeset sixarm@sixarm.com:1
-create table image_filter (
+--preconditions onFail:HALT onError:HALT
+--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'image_filter'
+
+create table image_filter ( --see ImageMagick image filter convert function paramters
   id int not null primary key,
   name_en varchar(255),         -- example: Shrink to fit
   name_fr varchar(255),         -- example: ?
@@ -15,4 +17,5 @@ create table image_filter (
   bytes_max int(11) unsigned,   -- upper limit of byte count
   dpi int(10) unsigned,         -- dots per inch
 );
+
 --rollback drop table image_filter;

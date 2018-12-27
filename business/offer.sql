@@ -1,8 +1,10 @@
 --liquibase formatted sql
 --see http://www.liquibase.org/
---see https://schema.org/Offer
 
 --changeset sixarm@sixarm.com:1
+--preconditions onFail:HALT onError:HALT
+--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'offer'
+
 create table offer (
   id int not null primary key,
   name_en varchar(20), -- example: Buy one get one free
@@ -13,4 +15,5 @@ create table offer (
   brand_id int,        -- example: Acme Brand
   product_id int       -- example: Acme Brand Hammer
 );
+
 --rollback drop table offer;

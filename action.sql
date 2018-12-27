@@ -1,9 +1,11 @@
 --liquibase formatted sql
 --see http://www.liquibase.org/
---see https://schema.org/Action
 
 --changeset sixarm@sixarm.com:1
-create table action (
+--preconditions onFail:HALT onError:HALT
+--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'action'
+
+create table action ( --see https://schema.org/Action
   id int not null primary key,
   name_en varchar(20), -- example: sing at a music concert
   name_fr varchar(20), -- example: chanter à concert de musique
@@ -12,4 +14,5 @@ create table action (
   agent_person_id int,
   agent_organization_id int, 
 );
+
 --rollback drop table action;

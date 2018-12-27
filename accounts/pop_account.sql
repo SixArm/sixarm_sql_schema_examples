@@ -1,8 +1,10 @@
 --liquibase formatted sql
 --see http://www.liquibase.org/
---see https://github.com/sixarm/sixarm_rails_engine_for_contacts
 
 --changeset sixarm@sixarm.com:1
+--preconditions onFail:HALT onError:HALT
+--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'pop_account'
+
 create table pop_account (
   id int not null primary key,
 
