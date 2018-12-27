@@ -3,11 +3,8 @@
 
 --changeset sixarm@sixarm.com:1
 --preconditions onFail:HALT onError:HALT
---precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'rag'
+--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM PG_TYPE WHERE typname = 'rag'
 
-create table rag (
-  id uuid not null primary key,
-  color_id uuid references color, -- example: red
-);
+CREATE TYPE rag AS ENUM ('red', 'amber', 'green');
 
---rollback drop table rag;
+--rollback drop type rag;
