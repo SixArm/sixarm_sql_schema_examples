@@ -6,7 +6,7 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'thing'
 
 create table thing (
-  id int not null primary key,
+  id uuid not null primary key,
   name_en varchar55),         -- example: apple
   name_fr varchar55),         -- example: pomme
   description_en text,          -- example: An apple is a fruit

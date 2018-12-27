@@ -6,8 +6,8 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'rag'
 
 create table rag (
-  id int not null primary key,
-  color_id int, -- example: red
+  id uuid not null primary key,
+  color_id uuid, -- example: red
 );
 
 --rollback drop table rag;

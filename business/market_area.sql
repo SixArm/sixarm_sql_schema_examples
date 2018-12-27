@@ -6,7 +6,7 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'market_area'
 
 create table market_area (
-  id int not null primary key,
+  id uuid not null primary key,
   name_en varchar,               -- example: San Francisco Bay Area Region
   name_fr varchar,               -- example: Région de la baie de San Francisco
   rank int,                      -- example: 3

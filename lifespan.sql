@@ -6,7 +6,7 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'lifespan'
 
 create table lifespan (
-  id int not null primary key,
+  id uuid not null primary key,
   birth_date_local date,         -- example: 2000-01-01
   birth_datetime datetime,       -- example: 2000-01-01T12:00:00Z
   birth_datetime_local datetime, -- example: 2000-01-01T12:00:00 Pacific

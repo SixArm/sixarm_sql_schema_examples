@@ -6,10 +6,10 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'ftp_account'
 
 create table ftp_account (
-  id int not null primary key,
+  id uuid not null primary key,
 
   -- User Credentials
-  user_id int,  
+  user_id uuid,  
   username varchar,
   password varchar,
 

@@ -6,7 +6,7 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'market_sector'
 
 create table market_sector (
-  id int not null primary key,
+  id uuid not null primary key,
   name_en varchar,               -- example: energy
   name_fr varchar                -- example: énergie
 );

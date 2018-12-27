@@ -6,7 +6,7 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'org'
 
 create table org (
-  id int not null primary key,
+  id uuid not null primary key,
   name varchar55) -- example: Acme
 );
 

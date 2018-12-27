@@ -6,7 +6,7 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'color'
 
 create table color (
-  id int not null primary key,
+  id uuid not null primary key,
   name_en varchar, -- example: red
   name_fr varchar, -- example: rouge
   hex char(6),         -- example: ff0000

@@ -6,7 +6,7 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'country'
 
 create table country (
-  id int not null primary key,
+  id uuid not null primary key,
   name_en varchar,            -- example: United States
   name_fr varchar,            -- example: États Unis
   iso_alpha_2_code char(2),   -- ISO 3166 Alpha-2 code; example: US

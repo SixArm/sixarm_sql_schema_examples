@@ -6,7 +6,7 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'image_filter'
 
 create table image_filter ( --see ImageMagick image filter convert function paramters
-  id int not null primary key,
+  id uuid not null primary key,
   name_en varchar55),         -- example: Shrink to fit
   name_fr varchar55),         -- example: ?
   geometry_x int unsigned,      -- the x width in pixels
