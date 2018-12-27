@@ -35,9 +35,8 @@ Geography:
 
   * [geolocation.sql](geography/geolocation.sql)
   * [country.sql](geography/country.sql)
-  * [country_subdivision.sql](geography/country_subdivision.sql)
-  * [locality.sql](geography/locality.sql)
   * [region.sql](geography/region.sql)
+  * [locality.sql](geography/locality.sql)
   * [street.sql](geography/street.sql)
   * [neighborhood.sql](geography/neighborhood.sql)
   * [postcode.sql](geography/postcode.sql)
