@@ -47,11 +47,14 @@ Business:
 
   * [brand.sql](business/brand.sql)
   * [currency.sql](business/currency.sql)
-  * [currency.sql](business/currency_pair.sql)
+  * [currency_conversion_service.sql](business/currency_conversion_service.sql)
+  * [currency_pair.sql](business/currency_pair.sql)
+  * [exchange_rate_specification.sql](business/exchange_rate_specification.sql)
   * [market_area.sql](business/market_area.sql)
   * [market_sector.sql](business/market_sector.sql)
-  * [monetary_value.sql](business/monetary_value_.sql)
-  * [monetary_range.sql](business/monetary_range.sql)
+  * [money_range.sql](business/money_range.sql)
+  * [money_transfer.sql](business/money_transfer.sql)
+  * [money_value.sql](business/money_value.sql)
   * [offer.sql](business/offer.sql)
   * [product.sql](business/product.sql)
 
