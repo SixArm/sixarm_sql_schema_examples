@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'locality'
 
+-- Locality
+-- https://schema.org/addressLocality
+-- A locality is a geographic area, such as a city, town, village, etc.
+
 create table locality (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area

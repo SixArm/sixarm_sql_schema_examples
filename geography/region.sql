@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'region'
 
+-- Region
+-- https://schema.org/addressRegion
+-- A geographic region, suitable for a country subdivision, or a postal address region, such as a U.S. state, Canadian province, etc.
+
 create table region (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area

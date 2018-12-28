@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'market_sector'
 
+-- Market sector
+-- https://en.wikipedia.org/wiki/Market_sector
+-- A business marketing conceptual area, such as for clustering products and servies, e.g. "Energy", "Food & Beverage", "Health Care".
+
 create table market_sector (
   id uuid not null primary key,
   name_as_en varchar, -- example: energy

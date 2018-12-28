@@ -5,6 +5,9 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'ftp_account'
 
+-- FTP account
+-- A file transfer protocol (FTP) account, such as for uploading/downloading files.
+
 create table ftp_account (
   id uuid not null primary key,
 

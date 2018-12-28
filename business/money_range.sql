@@ -7,7 +7,8 @@
 
 -- Money range 
 -- http://schema.org/MonetaryAmount
---
+-- A money range min-max.
+
 create table money_range (
   id uuid not null primary key,
   currency_id uuid references currency, -- example: USD

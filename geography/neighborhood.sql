@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'neighborhood'
 
+-- Locality
+-- https://en.wikipedia.org/wiki/Neighbourhood
+-- A geographically localised community within a larger city, town, suburb or rural area.
+
 create table neighborhood (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area

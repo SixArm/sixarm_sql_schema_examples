@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'lifespan'
 
+-- Lifespan
+-- https://en.wikipedia.org/wiki/Lifespan
+-- How long something (such as a person) lives, from birth to death.
+
 create table lifespan (
   id uuid not null primary key,
   birth_when timestamp, -- example: 2000-01-01T12:00:00Z

@@ -7,7 +7,8 @@
 
 -- Currency conversion service
 -- http://schema.org/CurrencyConversionService
---
+-- A service to convert funds from one currency to another currency.
+
 create table currency_conversion_service (
   id uuid not null primary key,
   interest_rate decimal, -- example: 0.05 means 5% interest rate

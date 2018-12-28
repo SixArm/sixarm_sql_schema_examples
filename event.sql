@@ -5,7 +5,11 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'event'
 
-create table event ( --see https://schema.org/Event
+-- Event
+-- https://schema.org/Event
+-- An event happening at a certain time and location, such as a concert, lecture, or festival. 
+
+create table event (
   id uuid not null primary key,
   name_as_en varchar, -- example: music concert
   name_as_es varchar, -- example: concierto de musica

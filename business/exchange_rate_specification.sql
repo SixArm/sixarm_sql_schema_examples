@@ -7,7 +7,8 @@
 
 -- Exchange rate specification
 -- http://schema.org/ExchangeRateSpecification
---
+-- A structured value representing an exchange rate.
+
 create table exchange_rate_specification (
   id uuid not null primary key,
   currency_pair_id uuid references currency_pair, -- example: USD/BTC

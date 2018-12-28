@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'postal_address'
 
+-- Postal address
+-- http://schema.org/PostalAddress
+-- A mailing address.
+
 create table postal_address (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area

@@ -7,6 +7,7 @@
 
 -- Currency 
 -- http://schema.org/Currency
+-- The currency in which the monetary amount is expressed.
 --
 -- Use standard formats:
 --

@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'thing'
 
+-- Thing
+-- https://schema.org/Thing
+-- The most generic type of item.
+
 create table thing (
   id uuid not null primary key,
   name_as_en varchar, -- example: apple

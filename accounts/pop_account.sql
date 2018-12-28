@@ -5,6 +5,9 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'pop_account'
 
+-- POP account
+-- A post office protocol (POP) account, such as for sending/receiving email.
+
 create table pop_account (
   id uuid not null primary key,
 

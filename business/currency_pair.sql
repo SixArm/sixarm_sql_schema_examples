@@ -7,7 +7,8 @@
 
 -- Currency pair 
 -- http://schema.org/Currency
---
+-- A currency pair, such as for converting from one currency to another, for example from U.S. dollars to Chinese yuan.
+
 create table currency_pair (
   id uuid not null primary key,
   a uuid references currency,

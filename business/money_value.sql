@@ -7,11 +7,12 @@
 
 -- Money value 
 -- http://schema.org/MonetaryAmount
---
+-- This type can be used to describe an amount of money such as $10 USD.
+
 create table money_value (
   id uuid not null primary key,
   currency_id uuid references currency, -- example: USD
-  value money -- example: 1000.00 meaning $1000.00 USD
+  value money -- example: 10.00 meaning $10.00 USD
 );
 
 --rollback drop table money_value;

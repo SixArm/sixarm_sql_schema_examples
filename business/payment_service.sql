@@ -6,11 +6,9 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'payment_service'
 
 -- Payment service
---
 -- http://schema.org/PaymentService
---
 -- A Service to transfer funds from a person or organization to a beneficiary person or organization.
---
+
 create table payment_service (
   id uuid not null primary key,
   interest_rate decimal, -- example: 0.05 means 5% interest rate

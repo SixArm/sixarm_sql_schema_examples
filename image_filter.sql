@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'image_filter'
 
+-- Image filter
+-- https://www.imagemagick.org
+-- An image filter. For example, settings to shrink to fit.
+
 create table image_filter ( --see ImageMagick image filter convert function paramters
   id uuid not null primary key,
   name_as_en varchar, -- example: Shrink to fit

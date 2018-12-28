@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'person'
 
+-- Person
+-- https://schema.org/Person
+-- A person (alive, dead, fictional, etc.)
+
 create table person (
   id uuid not null primary key,
   given_name_as_en varchar, -- example: Alice

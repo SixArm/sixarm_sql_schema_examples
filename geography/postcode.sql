@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'postcode'
 
+-- Postcode
+-- https://schema.org/postalCode
+-- A postal code, such as 94101 meaning an area of San Francisco, California, US.
+
 create table postcode (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area

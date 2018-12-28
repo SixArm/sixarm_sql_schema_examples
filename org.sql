@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'org'
 
+-- Org
+-- https://schema.org/Organization
+-- An organization such as a company, school, nonprofit, club, team, etc.
+
 create table org (
   id uuid not null primary key,
   name_as_en varchar, -- example: Acme Company

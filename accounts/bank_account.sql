@@ -7,7 +7,12 @@
 
 -- Bank account
 -- https://schema.org/BankAccount
---
+-- A product or service offered by a bank whereby one may deposit, withdraw or transfer money and in some cases be paid interest.
+
+-- Bank account
+-- https://schema.org/BankAccount
+-- A product or service offered by a bank whereby one may deposit, withdraw or transfer money and in some cases be paid interest.
+
 create table bank_account (
   id uuid not null primary key,  
 

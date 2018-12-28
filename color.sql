@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'color'
 
+-- Color
+-- https://schema.org/color
+-- A typical color, such as red, blue, green, etc.
+
 create table color (
   id uuid not null primary key,
   name_as_en varchar, -- example: red

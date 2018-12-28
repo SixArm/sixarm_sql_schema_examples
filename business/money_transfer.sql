@@ -7,7 +7,8 @@
 
 -- Money transfer
 -- http://schema.org/MoneyTransfer
---
+-- The act of transferring money from one place to another place. This may occur electronically or physically.
+
 create table money_transfer (
   id uuid not null primary key,
   money_value_id uuid references money_value, -- example $1000 USD

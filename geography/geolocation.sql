@@ -5,6 +5,10 @@
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'geolocation'
 
+-- Geolocation
+-- https://en.wikipedia.org/wiki/Geolocation
+-- A geographic location, such as on the surface of the earth
+
 create table geolocation (
   id uuid not null primary key,
   latitude float, -- example: 37.8199° N (Golden Gate Bridge)
