@@ -56,6 +56,7 @@ Business:
   * [money_transfer.sql](business/money_transfer.sql)
   * [money_value.sql](business/money_value.sql)
   * [offer.sql](business/offer.sql)
+  * [payment_service.sql](business/payment_service.sql)
   * [product.sql](business/product.sql)
 
 Accounts:
