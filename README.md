@@ -58,6 +58,7 @@ Business:
   * [offer.sql](business/offer.sql)
   * [payment_service.sql](business/payment_service.sql)
   * [product.sql](business/product.sql)
+  * [trade_action.sql](business/trade_action.sql)
 
 Accounts:
 
