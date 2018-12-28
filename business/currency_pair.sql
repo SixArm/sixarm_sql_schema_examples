@@ -6,7 +6,7 @@
 --precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'currency_pair'
 
 -- Currency pair 
--- http://schema.org/currency
+-- http://schema.org/Currency
 --
 create table currency_pair (
   id uuid not null primary key,
