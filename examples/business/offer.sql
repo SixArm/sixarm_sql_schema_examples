@@ -14,8 +14,8 @@ create table offer (
   name_as_en varchar, -- example: Buy one get one free
   name_as_es varchar, -- example: Compre uno y llévese otro gratis
   name_as_fr varchar, -- example: Acheter un en obtenir un gratuitement
-  start_when timestamp, -- example: 2000-01-01T12:00:00; a.k.a. valid from
-  stop_when timestamp, -- example: 2000-01-01T12:00:00; a.k.a. valid through
+  start_when timestamptz, -- example: 2000-01-01T12:00:00; a.k.a. valid from
+  stop_when timestamptz, -- example: 2000-01-01T12:00:00; a.k.a. valid through
   organization_id uuid references organization, -- example: Acme
   brand_id uuid references brand, -- example: Acme Brand
   product_id uuid references product -- example: Acme Brand Hammer

@@ -140,10 +140,10 @@ lock_version int,
 -- Track who touches the record and when,
 -- because this information helps in practice
 -- for diagnosing the application as it runs.
-created_at timestamp, created_by uuid references user,
-updated_at timestamp, updated_by uuid references user,
-proofed_at timestamp, updated_by uuid references user,
-retired_at timestamp, retired_by uuid references user,
+created_at timestamptz, created_by uuid references user,
+updated_at timestamptz, updated_by uuid references user,
+proofed_at timestamptz, proofed_by uuid references user,
+retired_at timestamptz, retired_by uuid references user,
 
 -- The field name "type" is a reserved word in some frameworks,
 -- which uses the field for single-table inheritance.
