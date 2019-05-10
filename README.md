@@ -10,67 +10,67 @@ Contents:
 * [Tracking](#tracking)
 
 
-## Schema example files
+## Schema examples
 
 Most popular:
 
-  * [person.sql](person.sql)
-  * [place.sql](place.sql)
-  * [thing.sql](thing.sql)
-  * [org.sql](org.sql)
-  * [event.sql](event.sql)
-  * [action.sql](action.sql)
-  * [tag.sql](tag.sql)
-  * [color.sql](color.sql)
+  * [person.sql\]\(examples/person.sql)
+  * [place.sql\]\(examples/place.sql)
+  * [thing.sql\]\(examples/thing.sql)
+  * [org.sql\]\(examples/org.sql)
+  * [event.sql\]\(examples/event.sql)
+  * [action.sql\]\(examples/action.sql)
+  * [tag.sql\]\(examples/tag.sql)
+  * [color.sql\]\(examples/color.sql)
 
 Access control:
 
-  * [access_user.sql](access/access_user.sql)
-  * [access_assigment.sql](access/access_assignment.sql)
-  * [access_attribute.sql](access/access_attribute.sql)
-  * [access_permission.sql](access/access_permission.sql)
-  * [access_operation.sql](access/access_operation.sql)
+  * [access_user.sql\]\(examples/access/access_user.sql)
+  * [access_assigment.sql\]\(examples/access/access_assignment.sql)
+  * [access_attribute.sql\]\(examples/access/access_attribute.sql)
+  * [access_permission.sql\]\(examples/access/access_permission.sql)
+  * [access_operation.sql\]\(examples/access/access_operation.sql)
 
 Geography:
 
-  * [geolocation.sql](geography/geolocation.sql)
-  * [country.sql](geography/country.sql)
-  * [country_subdivision.sql](geography/country_subdivision.sql)
-  * [region.sql](geography/region.sql)
-  * [locality.sql](geography/locality.sql)
-  * [street.sql](geography/street.sql)
-  * [neighborhood.sql](geography/neighborhood.sql)
-  * [postcode.sql](geography/postcode.sql)
-  * [postal_address.sql](postal/postal_address.sql)
+  * [geolocation.sql\]\(examples/geography/geolocation.sql)
+  * [country.sql\]\(examples/geography/country.sql)
+  * [country_subdivision.sql\]\(examples/geography/country_subdivision.sql)
+  * [region.sql\]\(examples/geography/region.sql)
+  * [locality.sql\]\(examples/geography/locality.sql)
+  * [street.sql\]\(examples/geography/street.sql)
+  * [neighborhood.sql\]\(examples/geography/neighborhood.sql)
+  * [postcode.sql\]\(examples/geography/postcode.sql)
+  * [postal_address.sql\]\(examples/postal/postal_address.sql)
 
 Business:
 
-  * [brand.sql](business/brand.sql)
-  * [currency.sql](business/currency.sql)
-  * [currency_conversion_service.sql](business/currency_conversion_service.sql)
-  * [currency_pair.sql](business/currency_pair.sql)
-  * [exchange_rate_specification.sql](business/exchange_rate_specification.sql)
-  * [market_area.sql](business/market_area.sql)
-  * [market_sector.sql](business/market_sector.sql)
-  * [money_range.sql](business/money_range.sql)
-  * [money_transfer.sql](business/money_transfer.sql)
-  * [money_value.sql](business/money_value.sql)
-  * [offer.sql](business/offer.sql)
-  * [payment_service.sql](business/payment_service.sql)
-  * [product.sql](business/product.sql)
-  * [trade_action.sql](business/trade_action.sql)
+  * [brand.sql\]\(examples/business/brand.sql)
+  * [currency.sql\]\(examples/business/currency.sql)
+  * [currency_conversion_service.sql\]\(examples/business/currency_conversion_service.sql)
+  * [currency_pair.sql\]\(examples/business/currency_pair.sql)
+  * [exchange_rate_specification.sql\]\(examples/business/exchange_rate_specification.sql)
+  * [market_area.sql\]\(examples/business/market_area.sql)
+  * [market_sector.sql\]\(examples/business/market_sector.sql)
+  * [money_range.sql\]\(examples/business/money_range.sql)
+  * [money_transfer.sql\]\(examples/business/money_transfer.sql)
+  * [money_value.sql\]\(examples/business/money_value.sql)
+  * [offer.sql\]\(examples/business/offer.sql)
+  * [payment_service.sql\]\(examples/business/payment_service.sql)
+  * [product.sql\]\(examples/business/product.sql)
+  * [trade_action.sql\]\(examples/business/trade_action.sql)
 
 Accounts:
 
-  * [bank_account.sql](accounts/bank_account.sql)
-  * [ftp_account.sql](accounts/ftp_account.sql)
-  * [pop_account.sql](accounts/pop_account.sql)
+  * [bank_account.sql\]\(examples/accounts/bank_account.sql)
+  * [ftp_account.sql\]\(examples/accounts/ftp_account.sql)
+  * [pop_account.sql\]\(examples/accounts/pop_account.sql)
 
 Misc:
 
-  * [rag.sql](rag.sql)
-  * [image_filter.sql](image_filter.sql)
-  * [lifespan.sql](lifespan.sql)
+  * [rag.sql\]\(examples/rag.sql)
+  * [image_filter.sql\]\(examples/image_filter.sql)
+  * [lifespan.sql\]\(examples/lifespan.sql)
 
 
 ## Schema conventions
@@ -207,8 +207,8 @@ Some developers prefer different ways of handling languages, naming, internation
 ## Tracking
 
 * Package: sixarm_sql_schema_examples
-* Version: 6.0.0
+* Version: 7.0.0
 * Created: 1996-01-01
-* Updated: 2019-01-01
+* Updated: 2019-05-09
 * License: BSD, MIT, GPL
 * Contact: Joel Parker Henderson (http://joelparkerhenderson.com)
