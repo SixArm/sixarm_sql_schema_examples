@@ -40,7 +40,7 @@ Geography:
   * [locality.sql\]\(examples/geography/locality.sql)
   * [street.sql\]\(examples/geography/street.sql)
   * [neighborhood.sql\]\(examples/geography/neighborhood.sql)
-  * [postcode.sql\]\(examples/geography/postcode.sql)
+  * [postal_code.sql\]\(examples/geography/postal_code.sql)
   * [postal_address.sql\]\(examples/postal/postal_address.sql)
 
 Business:

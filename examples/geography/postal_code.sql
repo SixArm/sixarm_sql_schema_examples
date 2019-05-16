@@ -3,13 +3,13 @@
 
 --changeset sixarm@sixarm.com:1
 --preconditions onFail:HALT onError:HALT
---precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'postcode'
+--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'postal_code'
 
--- Postcode
+-- postal_code
 -- https://schema.org/postalCode
 -- A postal code, such as 94101 meaning an area of San Francisco, California, US.
 
-create table postcode (
+create table postal_code (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area
   country_id uuid references  country, -- example: United States
@@ -18,4 +18,4 @@ create table postcode (
   code varchar, -- example: 94101
 );
 
---rollback drop table postcode;
+--rollback drop table postal_code;
