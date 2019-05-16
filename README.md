@@ -75,13 +75,34 @@ Misc:
 
 ## Schema conventions
 
+
+### General standardizations
+
 Use industry standard schemas such as the Schema.org project.
 
   * For example, a postal address has a field for "locality", not "city".
 
-Use scientific measurement units.
+Use International System of Units (SI), such as the metric system.
 
-  * For example, a "height" field uses meters, not feet nor inches.
+  * For example, the field name "height" is intended to use a unit of a meter, not a unit of a foot as in the Imperial system and United States customary system.
+
+
+### Date and time standardization
+
+Use date formats and time formats that are consistent with ISO standard formats.
+
+  * For example, the timestamp display format is Year-Month-Day and Hour:Minute:Second and "Z" i.e. Zulu time zone, such as "YYYY-MM-DDTHH:MM:SSZ"
+
+Any date or time field must be in UTC, unless the filed is deliberately representing local time, in which case the field name must use the suffix "_local" because this helps with disambiguation.
+
+  * For example, the "person" table has the field name "birth_date_local" because we care about the person's local date birthday, not Zulu date birthday.
+
+If you are using PostgreSQL, then you may want to change the "timestamp" data type to the PostgreSQL extension "timestamptz" data type.
+
+  * For example, the "event" table has the entry "start_when timestamp"; if you are using PostgreSQL, you probably want to change this field to "start_when timestamptz" for Zulu time, or "start_when_local timestamp" for local time.
+  
+
+### Our data naming conventions
 
 Use a table name that is singular, not plural.
 
@@ -91,37 +112,39 @@ Use a language code suffix when a text field could be different in different lan
 
   * For example, a person's name in English is "Amy" and in French is "Aimée", so use fields "name_as_en" and "name_as_fr".
 
-If a field can be a relation and/or freeform text, use two fields, one with suffix "_id" and one with suffix "_ie" meaning "I.e., in other words".
+If a field can be a relation and/or freeform text, use two fields, one with field name suffix "_id" and one with field name suffix "_ie" meaning "I.e., in other words".
 
-  * For example, a "status_id" field is a relation to the "status" table, and a "status_ie" field is freeform text a user can type.
-
-Use denormalization if it's likely to speed up typical usage.
-
-  * For example, some tables duplicate the "postal_code" field, because many of our apps use it to speed up local search.
-
-Use date formats and time formats that are consistent with ISO standard formats.
-
-  * For example, the timestamp display format is Year-Month-Day and Hour:Minute:Second and Zulu time zone, such as "YYYY-MM-DDTHH:MM:SSZ"
-
-Any date or time field that is representing local time must use the "_local" suffix because this helps with disambiguation.
-
-  * For example, the "person" table has the "birth_date_local" field because we care about the person's local date birthday, not Zulu date birthday.
-
-Handling corner cases well is more important than saving data space.
-
-  * For example, the concepts of a "region" and "country_subdivision" are nearly identical, but not quite, so we store both.
-
-Use typical data type default sizes.
-
-  * For example, we use the data type "varchar" as a default, when we don't know a text field will be somewhat short.
+  * For example, a field name "status_id" is intended to be a relation to the "status" table, and a field name "status_ie" is intended to be freeform text that user can enter.
 
 Use some of our notable exceptions because they are better at scale.
 
   * For example, for range naming we use "start" and "stop", not "begin" and "end", nor "from" and "to".
 
+
+### Types
+
+Use typical data type default sizes.
+
+  * For example, we use the data type "varchar" as a default, when we don't know a text field will be somewhat short.
+
 Use numeric data type with a large range, rather than float data type, because we prefer consistency over fluidity.
 
   * For example, we prefer numeric(20,12) as a general-purpose number type; you can change these as you like.
+
+Use the word "numeric" instead of "decimal" because its clearer, such as for integrations.
+
+  * For example, we prefer numeric(x,y) over decimal(x,y)
+
+
+### Optimizations
+
+Fast speed is more important than small size, so we prefer some denormalization.
+
+  * For example, some tables duplicate the field name "postal_code", because many of our apps use it to speed up local search.
+
+Handling corner cases well is more important than saving data space.
+
+  * For example, the concepts of a "region" and "country_subdivision" are nearly identical, but not quite, so we store both.
 
 
 ## Bonus fields for growth
@@ -144,10 +167,10 @@ lock_version int,
 -- Track who touches the record and when,
 -- because this information helps in practice
 -- for diagnosing the application as it runs.
-created_at timestamptz, created_by uuid references user,
-updated_at timestamptz, updated_by uuid references user,
-proofed_at timestamptz, proofed_by uuid references user,
-retired_at timestamptz, retired_by uuid references user,
+created_at timestamp, created_by uuid references user,
+updated_at timestamp, updated_by uuid references user,
+proofed_at timestamp, proofed_by uuid references user,
+retired_at timestamp, retired_by uuid references user,
 
 -- The field name "type" is a reserved word in some frameworks,
 -- which uses the field for single-table inheritance.

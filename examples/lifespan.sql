@@ -11,11 +11,11 @@
 
 create table lifespan (
   id uuid not null primary key,
-  birth_when timestamptz, -- example: 2000-01-01T12:00:00Z
+  birth_when timestamp, -- example: 2000-01-01T12:00:00Z
   birth_date_local date, -- example: 2000-01-01 Pacific Time Zone
   birth_time_local time, -- example: 12:00:00 Pacific Time Zone
   birth_place_id, -- example: San Francisco General Hospital
-  death_when timestamptz, -- example: 2000-01-01T12:00:00Z
+  death_when timestamp, -- example: 2000-01-01T12:00:00Z
   death_date_local date, -- example: 2000-01-01 Pacific Time Zone
   death_time_local time, -- example: 12:00:00 Pacific Time Zone
   death_place_id, -- example: San Francisco General Hospital
