@@ -119,9 +119,9 @@ Use some of our notable exceptions because they are better at scale.
 
   * For example, for range naming we use "start" and "stop", not "begin" and "end", nor "from" and "to".
 
-Use decimal data type with a large range, rather than float data type, because we prefer consistency over fluidity.
+Use numeric data type with a large range, rather than float data type, because we prefer consistency over fluidity.
 
-  * For example, we prefer decimal(20,12) as a general-purpose number type; you can change these as you like.
+  * For example, we prefer numeric(20,12) as a general-purpose number type; you can change these as you like.
 
 
 ## Bonus fields for growth
