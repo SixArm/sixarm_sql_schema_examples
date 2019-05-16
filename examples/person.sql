@@ -23,7 +23,7 @@ create table person (
   height numeric(20,12), -- example: 1.65 meters
   mass numeric(20,12), -- example: 70000 grams 
   geolocation_id uuid references geolocation, -- example: where the person is now
-  global_location_number numeric(13), -- https://en.wikipedia.org/wiki/Global_Location_Number
+  global_location_number integer(13), -- https://en.wikipedia.org/wiki/Global_Location_Number
   lifespan_id uuid references lifespan -- example: birth date is 2000-01-01
 );
 
