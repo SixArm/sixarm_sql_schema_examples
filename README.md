@@ -2,11 +2,18 @@
 
 Contents:
 
-* [Schema example files here](#schema-example-files-here)
+* [Schema examples](#schema-examples)
 * [Schema conventions](#schema-conventions)
+  * [General standardizations](#general-standardizations)
+  * [Date and time standardization](#date-and-time-standardization)
+  * [Our data naming conventions](#our-data-naming-conventions)
+  * [Types](#types)
+  * [Optimizations](#optimizations)
 * [Bonus fields for growth](#bonus-fields-for-growth)
-* [Liquibase introduction](#liquibase-introduction)
-* [Why we use Liquibase SQL vs. XML vs. YAML](#why-we-use-liquibase-sql-vs-xml-vs-yaml)
+* [Liquibase annotation](#liquibase-annotation)
+  * [Why we use Liquibase SQL vs. XML vs. YAML](#why-we-use-liquibase-sql-vs-xml-vs-yaml)
+* [Conventions](#conventions)
+* [Languages](#languages)
 * [Tracking](#tracking)
 
 
@@ -14,63 +21,63 @@ Contents:
 
 Most popular:
 
-  * [person.sql\]\(examples/person.sql)
-  * [place.sql\]\(examples/place.sql)
-  * [thing.sql\]\(examples/thing.sql)
-  * [org.sql\]\(examples/org.sql)
-  * [event.sql\]\(examples/event.sql)
-  * [action.sql\]\(examples/action.sql)
-  * [tag.sql\]\(examples/tag.sql)
-  * [color.sql\]\(examples/color.sql)
+  * [person](examples/person.sql)
+  * [place](examples/place.sql)
+  * [thing](examples/thing.sql)
+  * [org](examples/org.sql)
+  * [event](examples/event.sql)
+  * [action](examples/action.sql)
+  * [tag](examples/tag.sql)
+  * [color](examples/color.sql)
 
 Access control:
 
-  * [access_user.sql\]\(examples/access/access_user.sql)
-  * [access_assigment.sql\]\(examples/access/access_assignment.sql)
-  * [access_attribute.sql\]\(examples/access/access_attribute.sql)
-  * [access_permission.sql\]\(examples/access/access_permission.sql)
-  * [access_operation.sql\]\(examples/access/access_operation.sql)
+  * [access_user](examples/access/access_user.sql)
+  * [access_assigment](examples/access/access_assignment.sql)
+  * [access_attribute](examples/access/access_attribute.sql)
+  * [access_permission](examples/access/access_permission.sql)
+  * [access_operation](examples/access/access_operation.sql)
 
 Geography:
 
-  * [geolocation.sql\]\(examples/geography/geolocation.sql)
-  * [country.sql\]\(examples/geography/country.sql)
-  * [country_subdivision.sql\]\(examples/geography/country_subdivision.sql)
-  * [region.sql\]\(examples/geography/region.sql)
-  * [locality.sql\]\(examples/geography/locality.sql)
-  * [street_address.sql\]\(examples/geography/street_address.sql)
-  * [neighborhood.sql\]\(examples/geography/neighborhood.sql)
-  * [postal_code.sql\]\(examples/geography/postal_code.sql)
-  * [postal_address.sql\]\(examples/postal/postal_address.sql)
+  * [geolocation](examples/geography/geolocation.sql)
+  * [country](examples/geography/country.sql)
+  * [country_subdivision](examples/geography/country_subdivision.sql)
+  * [region](examples/geography/region.sql)
+  * [locality](examples/geography/locality.sql)
+  * [street_address](examples/geography/street_address.sql)
+  * [neighborhood](examples/geography/neighborhood.sql)
+  * [postal_code](examples/geography/postal_code.sql)
+  * [postal_address](examples/postal/postal_address.sql)
 
 Business:
 
-  * [brand.sql\]\(examples/business/brand.sql)
-  * [currency.sql\]\(examples/business/currency.sql)
-  * [currency_conversion_service.sql\]\(examples/business/currency_conversion_service.sql)
-  * [currency_pair.sql\]\(examples/business/currency_pair.sql)
-  * [exchange_rate_specification.sql\]\(examples/business/exchange_rate_specification.sql)
-  * [market_area.sql\]\(examples/business/market_area.sql)
-  * [market_sector.sql\]\(examples/business/market_sector.sql)
-  * [money_range.sql\]\(examples/business/money_range.sql)
-  * [money_transfer.sql\]\(examples/business/money_transfer.sql)
-  * [money_value.sql\]\(examples/business/money_value.sql)
-  * [offer.sql\]\(examples/business/offer.sql)
-  * [payment_service.sql\]\(examples/business/payment_service.sql)
-  * [product.sql\]\(examples/business/product.sql)
-  * [trade_action.sql\]\(examples/business/trade_action.sql)
+  * [brand](examples/business/brand.sql)
+  * [currency](examples/business/currency.sql)
+  * [currency_conversion_service](examples/business/currency_conversion_service.sql)
+  * [currency_pair](examples/business/currency_pair.sql)
+  * [exchange_rate_specification](examples/business/exchange_rate_specification.sql)
+  * [market_area](examples/business/market_area.sql)
+  * [market_sector](examples/business/market_sector.sql)
+  * [money_range](examples/business/money_range.sql)
+  * [money_transfer](examples/business/money_transfer.sql)
+  * [money_value](examples/business/money_value.sql)
+  * [offer](examples/business/offer.sql)
+  * [payment_service](examples/business/payment_service.sql)
+  * [product](examples/business/product.sql)
+  * [trade_action](examples/business/trade_action.sql)
 
 Accounts:
 
-  * [bank_account.sql\]\(examples/accounts/bank_account.sql)
-  * [ftp_account.sql\]\(examples/accounts/ftp_account.sql)
-  * [pop_account.sql\]\(examples/accounts/pop_account.sql)
+  * [bank_account](examples/accounts/bank_account.sql)
+  * [ftp_account](examples/accounts/ftp_account.sql)
+  * [pop_account](examples/accounts/pop_account.sql)
 
 Misc:
 
-  * [rag.sql\]\(examples/rag.sql)
-  * [image_filter.sql\]\(examples/image_filter.sql)
-  * [lifespan.sql\]\(examples/lifespan.sql)
+  * [rag](examples/rag.sql)
+  * [image_filter](examples/image_filter.sql)
+  * [lifespan](examples/lifespan.sql)
 
 
 ## Schema conventions
@@ -193,7 +200,7 @@ note longtext,
 ```
 
 
-## Liquibase introduction
+## Liquibase annotation
 
 Liquibase is an open source tool for managing database schema changes.
 
@@ -202,7 +209,7 @@ See https://en.wikipedia.org/wiki/Liquibase
 Our projects use database schema changes within source code, and within large projects, so we have schema examples here to help new projects.
 
 
-## Why we use Liquibase SQL vs. XML vs. YAML
+### Why we use Liquibase SQL vs. XML vs. YAML
 
 Liquibase files can be written in SQL, or XML, or YAML. We prefer SQL because more database administrators know it.
 
