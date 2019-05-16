@@ -23,7 +23,8 @@ create table person (
   height float, -- example: 1.65 meters
   mass float, -- example: 70000 grams 
   geolocation_id uuid references geolocation, -- example: where the person is now
-  lifespan_id uuid references lifespan, -- example: birth date is 2000-01-01
+  global_location_number decimal(13), -- https://en.wikipedia.org/wiki/Global_Location_Number
+  lifespan_id uuid references lifespan -- example: birth date is 2000-01-01
 );
 
 --rollback drop table person;

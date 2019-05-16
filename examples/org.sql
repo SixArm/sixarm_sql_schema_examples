@@ -13,7 +13,9 @@ create table org (
   id uuid not null primary key,
   name_as_en varchar, -- example: Acme Company
   name_as_es varchar, -- example: Acme Empressa
-  name_as_fr varchar -- example: Acme Entreprise
+  name_as_fr varchar, -- example: Acme Entreprise
+  geolocation_id uuid references geolocation, -- example: where the org is based
+  global_location_number decimal(13) -- https://en.wikipedia.org/wiki/Global_Location_Number
 );
 
 --rollback drop table org;
