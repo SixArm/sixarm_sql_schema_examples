@@ -11,10 +11,10 @@
 
 create table geolocation (
   id uuid not null primary key,
-  latitude float, -- example: 37.8199° N (Golden Gate Bridge)
-  longitude float, -- example: 122.4783° W (Golden Gate Bridge)
-  altitude float, -- example: 67.056 meters (to local surface of the earth)
-  elevation float, -- example: 67.056 meters (to global sea level)
+  latitude decimal(20,12), -- example: 37.8199° N (Golden Gate Bridge)
+  longitude decimal(20,12), -- example: 122.4783° W (Golden Gate Bridge)
+  altitude decimal(20,12), -- example: 67.056 meters (to local surface of the earth)
+  elevation decimal(20,12), -- example: 67.056 meters (to global sea level)
 );
 
 --rollback drop table geolocation;

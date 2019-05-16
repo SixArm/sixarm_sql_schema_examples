@@ -91,7 +91,7 @@ Use a language code suffix when a text field could be different in different lan
 
   * For example, a person's name in English is "Amy" and in French is "Aimée", so use fields "name_as_en" and "name_as_fr".
 
-If a field can be a relation or freeform text, use two fields, one with suffix "_id" and one with suffix "_ie" meaning "I.e., in other words".
+If a field can be a relation and/or freeform text, use two fields, one with suffix "_id" and one with suffix "_ie" meaning "I.e., in other words".
 
   * For example, a "status_id" field is a relation to the "status" table, and a "status_ie" field is freeform text a user can type.
 
@@ -99,11 +99,11 @@ Use denormalization if it's likely to speed up typical usage.
 
   * For example, some tables duplicate the "postcode" field, because many of our apps use it to speed up local search.
 
-Use dates formats and time formats that are consistent with ISO standard formats.
+Use date formats and time formats that are consistent with ISO standard formats.
 
   * For example, the timestamp display format is Year-Month-Day and Hour:Minute:Second and Zulu time zone, such as "YYYY-MM-DDTHH:MM:SSZ"
 
-Any date or time field that is representing local time must use the "_local" suffix.
+Any date or time field that is representing local time must use the "_local" suffix because this helps with disambiguation.
 
   * For example, the "person" table has the "birth_date_local" field because we care about the person's local date birthday, not Zulu date birthday.
 
@@ -118,6 +118,10 @@ Use typical data type default sizes.
 Use some of our notable exceptions because they are better at scale.
 
   * For example, for range naming we use "start" and "stop", not "begin" and "end", nor "from" and "to".
+
+Use decimal data type with a large range, rather than float data type, because we prefer consistency over fluidity.
+
+  * For example, we prefer decimal(20,12) as a general-purpose number type; you can change these as you like.
 
 
 ## Bonus fields for growth
