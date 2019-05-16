@@ -38,7 +38,7 @@ Geography:
   * [country_subdivision.sql\]\(examples/geography/country_subdivision.sql)
   * [region.sql\]\(examples/geography/region.sql)
   * [locality.sql\]\(examples/geography/locality.sql)
-  * [street.sql\]\(examples/geography/street.sql)
+  * [street_address.sql\]\(examples/geography/street_address.sql)
   * [neighborhood.sql\]\(examples/geography/neighborhood.sql)
   * [postal_code.sql\]\(examples/geography/postal_code.sql)
   * [postal_address.sql\]\(examples/postal/postal_address.sql)
@@ -97,7 +97,7 @@ If a field can be a relation and/or freeform text, use two fields, one with suff
 
 Use denormalization if it's likely to speed up typical usage.
 
-  * For example, some tables duplicate the "postcode" field, because many of our apps use it to speed up local search.
+  * For example, some tables duplicate the "postal_code" field, because many of our apps use it to speed up local search.
 
 Use date formats and time formats that are consistent with ISO standard formats.
 
