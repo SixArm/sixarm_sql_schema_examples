@@ -13,6 +13,7 @@ create table region (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area
   country_id uuid references country, -- example: United States
+  country_subdivision_id uuid references country_subdivision, -- example: California
   iso_3166_2_code char(5), -- ISO 3166-2 code; example: US-CA
   name_as_en varchar, -- example: California
   name_as_es varchar, -- example: California

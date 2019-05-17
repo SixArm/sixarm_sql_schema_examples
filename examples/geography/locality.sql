@@ -13,6 +13,7 @@ create table locality (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area
   country_id uuid references country, -- example: United States
+  country_subdivision_id uuid references country_subdivision, -- example: California
   region_id uuid references region, -- example: California
   name_as_en varchar, -- example: San Francisco
   name_as_es varchar, -- example: San Francisco
