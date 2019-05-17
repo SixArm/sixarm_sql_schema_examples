@@ -131,6 +131,10 @@ Use some of our notable exceptions because they are better at scale.
 
   * For example, for range naming we use "start" and "stop", not "begin" and "end", nor "from" and "to".
 
+Use a field name with a long meaningful name, not an abbreviation nor initialism.
+
+  * For example, use "latitude", not "lat".
+
 
 ### Types
 

@@ -19,7 +19,8 @@ create table org (
   photo_uri varchar, -- example: https://example.com/photo.jpg
   vcard_vcf text, -- https://en.wikipedia.org/wiki/VCard
   hcard_html text, -- https://en.wikipedia.org/wiki/HCard
-  vatin varchar, -- https://en.wikipedia.org/wiki/VAT_identification_number
+  value_added_tax_identification_number varchar, -- https://en.wikipedia.org/wiki/VAT_identification_number
+  legal_entity_identifier char(20), -- https://schema.org/leiCode https://en.wikipedia.org/wiki/Legal_Entity_Identifier
   lifespan_id uuid references lifespan -- example: origin date is 2000-01-01
 );
 
