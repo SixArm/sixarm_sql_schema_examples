@@ -13,7 +13,7 @@ create table postal_address (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area
   country_id uuid references country, -- example: United States
-  postal_region_id uuid references region, -- example: California
+  region_id uuid references region, -- example: California
   locality_id uuid references locality, -- example: San Francisco
   postal_code_id uuid references postal_code, -- example: 94101
   street_address_id uuid references street_address, -- example: 123 Main Street
