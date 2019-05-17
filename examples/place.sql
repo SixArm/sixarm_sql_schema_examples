@@ -20,7 +20,8 @@ create table place (
   name_as_en varchar, -- example: Mission Dolores Park
   name_as_es varchar, -- example: parque Mission Dolores
   name_as_fr varchar, -- example: parc Mission Dolores Park
-  photo_uri varchar -- example: https://example.com/photo.jpg
+  photo_uri varchar, -- example: https://example.com/photo.jpg
+  international_standard_of_industrial_classification_rev_4 char(5) -- https://schema.org/isicV4 https://en.wikipedia.org/wiki/International_Standard_Industrial_Classification
 );
 
 --rollback drop table place;
