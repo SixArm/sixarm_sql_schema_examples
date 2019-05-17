@@ -15,7 +15,8 @@ create table org (
   name_as_es varchar, -- example: Acme Empressa
   name_as_fr varchar, -- example: Acme Entreprise
   geolocation_id uuid references geolocation, -- example: where the org is based
-  global_location_number integer(13) -- https://en.wikipedia.org/wiki/Global_Location_Number
+  global_location_number integer(13), -- https://en.wikipedia.org/wiki/Global_Location_Number
+  vcard text -- https://en.wikipedia.org/wiki/VCard
 );
 
 --rollback drop table org;

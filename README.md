@@ -145,13 +145,17 @@ Use the word "numeric" instead of "decimal" because its clearer, such as for int
 
 ### Optimizations
 
-Fast speed is more important than small size, so we prefer some denormalization.
+Fast speed is more important than space, so we prefer some denormalization.
 
   * For example, some tables duplicate the field name "postal_code", because many of our apps use it to speed up local search.
 
-Handling corner cases well is more important than saving data space.
+Handling corner cases well is more important than space.
 
   * For example, the concepts of a "region" and "country_subdivision" are nearly identical, but not quite, so we store both.
+
+Providing usable represenations is more important than space.
+
+  * For example, the table "person" and table "organization" both have a field name "vcard" that stores the VCard VCF text.
 
 
 ## Bonus fields for growth
