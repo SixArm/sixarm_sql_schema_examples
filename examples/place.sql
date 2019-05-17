@@ -20,6 +20,7 @@ create table place (
   name_as_en varchar, -- example: Mission Dolores Park
   name_as_es varchar, -- example: parque Mission Dolores
   name_as_fr varchar, -- example: parc Mission Dolores Park
+  photo_uri varchar -- example: https://example.com/photo.jpg
 );
 
 --rollback drop table place;

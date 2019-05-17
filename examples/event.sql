@@ -17,6 +17,7 @@ create table event (
   description_as_en varchar, -- example: music concert
   description_as_es varchar, -- example: concierto de musica
   description_as_fr varchar, -- example: concert de musique
+  photo_uri varchar, -- example: https://example.com/photo.jpg
   start_when timestamp, -- example: 2000-01-01T12:00:00Z
   start_date_local date, -- example: 2000-01-01
   start_time_local time, -- example: 12:00:00
