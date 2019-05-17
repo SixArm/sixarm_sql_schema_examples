@@ -140,7 +140,7 @@ Use numeric data type with a large range, rather than float data type, because w
 
 Use the word "numeric" instead of "decimal" because its clearer, such as for integrations.
 
-  * For example, we prefer numeric(x,y) over decimal(x,y)
+  * For example, we prefer numeric(x,y) over decimal(x,y).
 
 
 ### Optimizations
