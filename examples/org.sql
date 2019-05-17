@@ -20,7 +20,7 @@ create table org (
   vcard_vcf text, -- https://en.wikipedia.org/wiki/VCard
   hcard_html text, -- https://en.wikipedia.org/wiki/HCard
   vatin varchar, -- https://en.wikipedia.org/wiki/VAT_identification_number
-  lifespan_id uuid references lifespan -- example: birth date is 2000-01-01
+  lifespan_id uuid references lifespan -- example: origin date is 2000-01-01
 );
 
 --rollback drop table org;
