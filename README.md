@@ -115,6 +115,10 @@ Use a table name that is singular, not plural.
 
   * For example, the examples have a "person" table, not "persons" nor "people".
 
+Use lowercase SQL, rather than uppercase SQL. 
+
+  * For example, the examples use "create table", not "CREATE TABLE".
+
 Use a language code suffix when a text field could be different in different languages.
 
   * For example, a person's name in English is "Amy" and in French is "Aimée", so use fields "name_as_en" and "name_as_fr".
@@ -218,15 +222,6 @@ Our projects use database schema changes within source code, and within large pr
 Liquibase files can be written in SQL, or XML, or YAML. We prefer SQL because more database administrators know it.
 
 If you prefer XML or YAML and would like to translate our examples, then we welcome the help and also welcome pull requests.
-
-
-## Conventions
-
-We use conventions for our databases and SQL that are our preferences. You may want to edit the files here for your own preferences.
-
-* We prefer singular table names, rather than plural table names. For example, we prefer the table name "item" rather than the table name "items".
-
-* We prefer lowercase SQL, rather than uppercase SQL. For example, we prefer "create table" rather than "CREATE TABLE".
 
 
 ## Languages
