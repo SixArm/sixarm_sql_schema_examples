@@ -240,7 +240,7 @@ Some developers prefer different ways of handling languages, naming, internation
 ## Tracking
 
 * Package: sixarm_sql_schema_examples
-* Version: 8.3.0
+* Version: 8.3.1
 * Created: 1996-01-01
 * Updated: 2019-05-16
 * License: BSD, MIT, GPL
