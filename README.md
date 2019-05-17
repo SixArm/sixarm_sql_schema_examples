@@ -27,6 +27,7 @@ Most popular:
   * [org](examples/org.sql)
   * [event](examples/event.sql)
   * [action](examples/action.sql)
+  * [schedule](examples/schedule.sql)
   * [tag](examples/tag.sql)
   * [color](examples/color.sql)
 
@@ -94,7 +95,7 @@ Use International System of Units (SI), such as the metric system.
   * For example, the field name "height" is intended to use a unit of a meter, not a unit of a foot as in the Imperial system and United States customary system.
 
 
-### Date and time standardization
+### Dates and times
 
 Use date formats and time formats that are consistent with ISO standard formats.
 
@@ -109,7 +110,7 @@ If you are using PostgreSQL, then you may want to change the "timestamp" data ty
   * For example, the "event" table has the entry "start_when timestamp"; if you are using PostgreSQL, you probably want to change this field to "start_when timestamptz" for Zulu time, or "start_when_local timestamp" for local time.
   
 
-### Our data naming conventions
+### Our SQL conventions
 
 Use a table name that is singular, not plural.
 
@@ -119,21 +120,37 @@ Use lowercase SQL, rather than uppercase SQL.
 
   * For example, the examples use "create table", not "CREATE TABLE".
 
-Use a language code suffix when a text field could be different in different languages.
 
-  * For example, a person's name in English is "Amy" and in French is "Aimée", so use fields "name_as_en" and "name_as_fr".
+### Our field name conventions
 
-If a field can be a relation and/or freeform text, use two fields, one with field name suffix "_id" and one with field name suffix "_ie" meaning "I.e., in other words".
+If a field can be a relation and/or freeform text, then use two fields, one with field name suffix "_id" and one with field name suffix "_ie" meaning "I.e., in other words".
 
   * For example, a field name "status_id" is intended to be a relation to the "status" table, and a field name "status_ie" is intended to be freeform text that user can enter.
 
-Use some of our notable exceptions because they are better at scale.
+If fields are intended to be a range, then prefer "start" and "stop", not "begin" and "end", nor "from" and "to".
 
-  * For example, for range naming we use "start" and "stop", not "begin" and "end", nor "from" and "to".
-
+  * For example, the table "event" has a start time and stop time, not a begin time and end time.
+  
 Use a field name with a long meaningful name, not an abbreviation nor initialism.
 
   * For example, use "latitude", not "lat".
+
+
+### Languages
+
+We prefer to work with multiple languages. For example, we often use English, Spanish, Chinese, and many other languages.
+
+  * For example, a person's name in English is "Amy" and in French is "Aimée".
+
+We use a naming convention of "{field}_as_{language}".
+
+  * For example, the table "person" has a field name "name_as_en" meaning "the name as English", and a field name "name_as_fr" meaning the name as French.
+
+For the example files here, we list English, French, and Spanish. This is so you can see how multiple languages can work.
+
+You can add more languages if you want.
+
+Some developers prefer different ways of handling languages, naming, internationalization, and localization. You can customize the files as you like for your goals.
 
 
 ### Types
@@ -227,18 +244,6 @@ Liquibase files can be written in SQL, or XML, or YAML. We prefer SQL because mo
 
 If you prefer XML or YAML and would like to translate our examples, then we welcome the help and also welcome pull requests.
 
-
-## Languages
-
-We prefer to work with multiple languages. For example, we often use English, Spanish, Chinese, and many other languages.
-
-We use a naming convention of "{field}_as_{language}" such as "name_as_en" that means "the name as English", "name_as_es"
-
-For the example files here, we list English and Spanish, so you can see how multiple languages can work.
-
-You can add more languages if you want.
-
-Some developers prefer different ways of handling languages, naming, internationalization, and localization. You can customize the files as you like for your goals.
 
 
 ## Tracking
