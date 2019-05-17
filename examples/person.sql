@@ -27,7 +27,8 @@ create table person (
   photo_uri varchar, -- example: https://example.com/photo.jpg
   vcard_vcf text, -- https://en.wikipedia.org/wiki/VCard
   hcard_html text, -- https://en.wikipedia.org/wiki/HCard
-  lifespan_id uuid references lifespan, -- example: birth date is 2000-01-01
+  vatin varchar, -- https://en.wikipedia.org/wiki/VAT_identification_number
+  lifespan_id uuid references lifespan -- example: birth date is 2000-01-01
 );
 
 --rollback drop table person;

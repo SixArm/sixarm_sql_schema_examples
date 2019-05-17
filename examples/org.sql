@@ -18,7 +18,8 @@ create table org (
   global_location_number integer(13), -- https://en.wikipedia.org/wiki/Global_Location_Number
   photo_uri varchar, -- example: https://example.com/photo.jpg
   vcard_vcf text, -- https://en.wikipedia.org/wiki/VCard
-  hcard_html text -- https://en.wikipedia.org/wiki/HCard
+  hcard_html text, -- https://en.wikipedia.org/wiki/HCard
+  vatin varchar -- https://en.wikipedia.org/wiki/VAT_identification_number
 );
 
 --rollback drop table org;
