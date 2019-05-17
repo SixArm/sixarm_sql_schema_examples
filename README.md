@@ -5,15 +5,23 @@ Contents:
 * [Schema examples](#schema-examples)
 * [Schema conventions](#schema-conventions)
   * [General standardizations](#general-standardizations)
-  * [Date and time standardization](#date-and-time-standardization)
-  * [Our data naming conventions](#our-data-naming-conventions)
+  * [Dates and times](#dates-and-times)
+  * [Our SQL conventions](#our-sql-conventions)
+  * [Our field name conventions](#our-field-name-conventions)
+  * [Languages](#languages)
   * [Types](#types)
   * [Optimizations](#optimizations)
 * [Bonus fields for growth](#bonus-fields-for-growth)
+  * [Secure random primary keys](#secure-random-primary-keys)
+  * [Optimistic locking](#optimistic-locking)
+  * [Change tracking](#change-tracking)
+  * [Single table inheritance](#single-table-inheritance)
+  * [Position order](#position-order)
+  * [Parent pointer](#parent-pointer)
+  * [Status](#status)
+  * [For more information](#for-more-information)
 * [Liquibase annotation](#liquibase-annotation)
   * [Why we use Liquibase SQL vs. XML vs. YAML](#why-we-use-liquibase-sql-vs-xml-vs-yaml)
-* [Conventions](#conventions)
-* [Languages](#languages)
 * [Tracking](#tracking)
 
 
@@ -188,18 +196,30 @@ Providing usable represenations is more important than space.
 
 In practice we often add some bonus fields to each table; these fields help us with the growth of the app, and also the administration of the app.
 
-Examples:
 
+### Secure random primary keys
+
+Example:
 
 ```sql
 -- We prefer using secure random 128-bit numbers as primary keys.
 -- These numbers are storable in a typical PostgreSQL UUID field.
 id uuid not null primary key,
+```
 
+### Optimistic locking
+
+Example:
+
+```sql
 -- An incrementing number that an application can
 -- use for optimistic locking for read/write speed
 lock_version int,
+```
 
+### Change tracking
+
+```sql
 -- Track who touches the record and when,
 -- because this information helps in practice
 -- for diagnosing the application as it runs.
@@ -207,24 +227,54 @@ created_at timestamp, created_by uuid references user,
 updated_at timestamp, updated_by uuid references user,
 proofed_at timestamp, proofed_by uuid references user,
 retired_at timestamp, retired_by uuid references user,
+```
 
+### Single table inheritance
+
+Example:
+
+```sql
 -- The field name "type" is a reserved word in some frameworks,
 -- which uses the field for single-table inheritance.
 type varchar,
+```
 
+### Position order
+
+Example:
+
+```sql
 -- The field name "position" is a reserved word in some frameworks,
 -- which uses the field for ordering by position index number.
 position integer,
+```
 
+### Parent pointer
+
+Example:
+
+```sql
 -- For a record that has a direct parent record
 parent_id uuid references self,
+```
 
+### Status
+
+Example:
+
+```sql
 -- Status table suitable for the app
 status_id uuid references status,
 status_ie varchar,
+```
 
+### For more information
+
+Example:
+
+```sql
 -- Ways to see more about the record, such as a URL to more information, and a note of text.
-url varchar,
+uri varchar,
 note longtext,
 ```
 
