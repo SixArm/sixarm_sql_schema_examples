@@ -23,12 +23,12 @@ create table person (
   height numeric(20,12), -- example: 1.65 meters
   mass numeric(20,12), -- example: 70000 grams 
   geolocation_id uuid references geolocation, -- example: where the person is now
-  global_location_number integer(13), -- https://en.wikipedia.org/wiki/Global_Location_Number
+  global_location_number integer(13), -- https://schema.org/globalLocationNumber https://en.wikipedia.org/wiki/Global_Location_Number
   photo_uri varchar, -- example: https://example.com/photo.jpg
   vcard_vcf text, -- https://en.wikipedia.org/wiki/VCard
   hcard_html text, -- https://en.wikipedia.org/wiki/HCard
-  value_added_tax_identification_number varchar, -- https://en.wikipedia.org/wiki/VAT_identification_number
-  legal_entity_identifier char(20), -- https://en.wikipedia.org/wiki/Legal_Entity_Identifier
+  value_added_tax_identification_number varchar, -- https://schema.org/vatID https://en.wikipedia.org/wiki/VAT_identification_number
+  legal_entity_identifier char(20), -- https://schema.org/leiCode https://en.wikipedia.org/wiki/Legal_Entity_Identifier
   lifespan_id uuid references lifespan -- example: birth date is 2000-01-01
 );
 

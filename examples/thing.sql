@@ -23,7 +23,7 @@ create table thing (
   mass numeric(20,12), -- as grams
   color_id uuid references color, -- example: red
   geolocation_id uuid references geolocation, -- example: where the thing is now
-  global_location_number integer(13), -- https://en.wikipedia.org/wiki/Global_Location_Number
+  global_location_number integer(13), -- https://schema.org/globalLocationNumber https://en.wikipedia.org/wiki/Global_Location_Number
   photo_uri varchar, -- example: https://example.com/photo.jpg
   lifespan_id uuid references lifespan -- example: origin date is 2000-01-01
 );

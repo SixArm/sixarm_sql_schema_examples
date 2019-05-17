@@ -12,7 +12,7 @@
 create table place (
   id uuid not null primary key,
   geolocation_id uuid references geolocation, -- example: center point of area
-  global_location_number integer(13), -- https://en.wikipedia.org/wiki/Global_Location_Number
+  global_location_number integer(13), -- https://schema.org/globalLocationNumber https://en.wikipedia.org/wiki/Global_Location_Number
   country_id uuid references country, -- example: United States
   region_id uuid references region, -- example: California
   locality_id uuid references locality, -- example: San Francisco
