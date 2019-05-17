@@ -159,7 +159,7 @@ Handling corner cases well is more important than space.
 
 Providing usable represenations is more important than space.
 
-  * For example, the table "person" and table "organization" both have a field name "vcard" that stores the VCard VCF text, and a field name "hcard" that stoare the VCard as an HCard HTML microformat.
+  * For example, the table "person" and table "organization" both have a field name "vcard" that stores the VCard VCF text, and a field name "hcard" that stores the VCard as a HCard HTML microformat.
 
 
 ## Bonus fields for growth
@@ -240,7 +240,7 @@ Some developers prefer different ways of handling languages, naming, internation
 ## Tracking
 
 * Package: sixarm_sql_schema_examples
-* Version: 8.1.2
+* Version: 8.2.2
 * Created: 1996-01-01
 * Updated: 2019-05-16
 * License: BSD, MIT, GPL
