@@ -25,6 +25,7 @@ create table person (
   geolocation_id uuid references geolocation, -- example: where the person is now
   global_location_number integer(13), -- https://en.wikipedia.org/wiki/Global_Location_Number
   vcard text, -- https://en.wikipedia.org/wiki/VCard
+  hcard text, -- https://en.wikipedia.org/wiki/HCard
   lifespan_id uuid references lifespan, -- example: birth date is 2000-01-01
 );
 
