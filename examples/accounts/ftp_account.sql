@@ -22,4 +22,6 @@ create table ftp_account (
   use_ssl boolean
 );
 
+create index idx_user_id on ftp_account(user_id);
+
 --rollback drop table ftp_account;

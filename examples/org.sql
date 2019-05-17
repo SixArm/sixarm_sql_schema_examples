@@ -25,4 +25,7 @@ create table org (
   lifespan_id uuid references lifespan -- example: origin date is 2000-01-01
 );
 
+create index idx_geolocation_id on org(geolocation_id);
+create index idx_lifespan_id on org(lifespan_id);
+
 --rollback drop table org;

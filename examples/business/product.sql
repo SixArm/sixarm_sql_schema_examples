@@ -29,4 +29,8 @@ create table product (
   gtin14 char(14), -- The GTIN-14 code
 );
 
+create index idx_brand_id on product(brand_id);
+create index idx_manufacturer_id on product(manufacturer_id);
+create index idx_color_id on product(color_id);
+
 --rollback drop table product;

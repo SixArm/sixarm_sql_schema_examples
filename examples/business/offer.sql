@@ -21,4 +21,8 @@ create table offer (
   product_id uuid references product -- example: Acme Brand Hammer
 );
 
+create index idx_organization_id on offer(organization_id);
+create index idx_brand_id on offer(brand_id);
+create index idx_product_id on offer(product_id);
+
 --rollback drop table offer;

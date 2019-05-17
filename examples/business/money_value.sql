@@ -15,4 +15,6 @@ create table money_value (
   value money -- example: 10.00 meaning $10.00 USD
 );
 
+create index idx_currency_id on money_value(currency_id);
+
 --rollback drop table money_value;

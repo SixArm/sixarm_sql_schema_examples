@@ -32,4 +32,7 @@ create table person (
   lifespan_id uuid references lifespan -- example: birth date is 2000-01-01
 );
 
+create index idx_geolocation_id on person(geolocation_id);
+create index idx_lifespan_id on person(lifespan_id);
+
 --rollback drop table person;

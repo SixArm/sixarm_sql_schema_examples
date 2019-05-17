@@ -14,13 +14,13 @@ create table image_filter ( --see ImageMagick image filter convert function para
   name_as_en varchar, -- example: Shrink to fit
   name_as_es varchar, -- example: encogerse para encajar
   name_as_fr varchar, -- example: rétrécir pour s'adapter
-  geometry_x int unsigned, -- the x width in pixels
-  geometry_y int unsigned, -- the y height in pixels
-  quality_jpg int unsigned, 
+  geometry_x integer unsigned, -- the x width in pixels
+  geometry_y integer unsigned, -- the y height in pixels
+  quality_jpg integer unsigned, 
   quality_png_zlib_compression_level smallint(2) unsigned,
   quality_png_filtering_type smallint(2) unsigned,
-  bytes_max int(11) unsigned, -- upper limit of byte count
-  dpi int(10) unsigned, -- dots per inch
+  bytes_max integer(11) unsigned, -- upper limit of byte count
+  dpi integer(10) unsigned, -- dots per inch
 );
 
 --rollback drop table image_filter;

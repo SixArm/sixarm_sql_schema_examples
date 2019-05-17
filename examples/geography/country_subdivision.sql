@@ -19,4 +19,7 @@ create table country_subdivision (
   iso_code char(5) -- ISO 3166-2 code; example: US-CA
 );
 
+create index idx_geolocation_id on country_subdivision(geolocation_id);
+create index idx_country_id on country_subdivision(country_id);
+
 --rollback drop table country_subdivision;

@@ -20,4 +20,9 @@ create table locality (
   name_as_fr varchar -- example: Saint François
 );
 
+create index idx_geolocation_id on locality(geolocation_id);
+create index idx_country_id on locality(country_id);
+create index idx_country_subdivision_id on locality(country_subdivision_id);
+create index idx_region_id on locality(region_id);
+
 --rollback drop table locality;

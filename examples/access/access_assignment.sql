@@ -14,4 +14,7 @@ create table access_assignment (
   name_as_fr varchar unique -- example: administrateur pouvez créer article
 );
 
+create index idx_access_user_id on access_assigment(access_user_id);
+create index idx_access_role_id on access_assigment(access_role_id);
+
 --rollback drop table access_assignment;

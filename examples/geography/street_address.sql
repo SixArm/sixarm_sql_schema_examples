@@ -22,4 +22,11 @@ create table street_address (
   name_as_fr varchar -- example: 123 Rue Principale
 );
 
+create index idx_geolocation_id on street_address(geolocation_id);
+create index idx_country_id on street_address(country_id);
+create index idx_country_subdivision_id on street_address(country_subdivision_id);
+create index idx_region_id on street_address(region_id);
+create index idx_locality_id on street_address(locality_id);
+create index idx_postal_code_id on street_address(postal_code_id);
+
 --rollback drop table street_address;

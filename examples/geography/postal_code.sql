@@ -19,4 +19,10 @@ create table postal_code (
   code varchar, -- example: 94101
 );
 
+create index idx_geolocation_id on postal_code(geolocation_id);
+create index idx_country_id on postal_code(country_id);
+create index idx_country_subdivision_id on postal_code(country_subdivision_id);
+create index idx_region_id on postal_code(region_id);
+create index idx_locality_id on postal_code(locality_id);
+
 --rollback drop table postal_code;

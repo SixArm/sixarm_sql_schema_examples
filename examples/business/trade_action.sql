@@ -14,4 +14,6 @@ create table trade_action (
   money_value_id uuid references money_value, -- example $10 USD
 );
 
+create index idx_money_value_id on trade_action(money_value_id);
+
 --rollback drop table trade_action;

@@ -16,4 +16,6 @@ create table money_range (
   max_value money -- example: 1000.00 meaning $1000.00 USD
 );
 
+create index idx_currency_id on money_range(currency_id);
+
 --rollback drop table money_range;

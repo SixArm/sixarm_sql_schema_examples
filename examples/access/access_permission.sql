@@ -14,4 +14,7 @@ create table access_permission (
   name_as_fr varchar unique -- example: administrateur pouvez créer article
 );
 
+create index idx_access_attribute_id on access_permission(access_attribute_id);
+create index idx_access_operation_id on access_permission(access_operation_id);
+
 --rollback drop table access_permission;

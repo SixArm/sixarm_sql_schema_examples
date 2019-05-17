@@ -24,7 +24,7 @@ create table bank_account (
   account_type varchar, -- example: "savings"
 
   -- A minimum amount that has to be paid in every month.
-  account_minimum_inflow uuid references monetary_amount,
+  account_minimum_inflow_id uuid references monetary_amount,
 
 	-- An overdraft is an extension of credit from a lending institution 
   -- when an account reaches zero. An overdraft allows the individual 
@@ -48,5 +48,10 @@ create table bank_account (
   iso_9362_code varchar(11)
 
 );
+
+create index idx_user_id on bank_account(user_id);
+create index idx_organization_id on bank_account(organization_id);
+create index idx_account_minimum_inflow_id on bank_account(account_minimum_inflow_id);
+create index idx_account_overdraft_limit_id on bank_account(account_overdraft_limit_id);
 
 --rollback drop table bank_account;

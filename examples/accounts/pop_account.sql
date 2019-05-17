@@ -33,4 +33,7 @@ create table pop_account (
   outbound_mail_use_tls boolean,
 
 );
+
+create index idx_user_id on pop_account(user_id);
+
 --rollback drop table pop_account;

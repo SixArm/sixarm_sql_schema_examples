@@ -15,4 +15,7 @@ create table currency_pair (
   b uuid references currency
 );
 
+create index idx_a on currency_pair(a);
+create index idx_b on currency_pair(b);
+
 --rollback drop table currency_pair;

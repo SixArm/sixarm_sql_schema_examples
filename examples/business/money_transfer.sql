@@ -16,4 +16,8 @@ create table money_transfer (
   to_bank_account_id uuid references bank_account -- example: Citibank account #200
 );
 
+create index idx_money_value_id on money_transfer(money_value_id);
+create index idx_from_bank_account_id on money_transfer(from_bank_account_id);
+create index idx_to_bank_account_id on money_transfer(to_bank_account_id;
+
 --rollback drop table monetary_value;

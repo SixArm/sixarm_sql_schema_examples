@@ -19,4 +19,7 @@ create table country (
   iso_alpha_3_code char(3), -- ISO 3166 Alpha-3 code; example: USA
   iso_numeric_code char(3) -- ISO United Nations M49 code; example: 840
 );
+
+create index idx_geolocation_id on country(geolocation_id);
+
 --rollback drop table country;

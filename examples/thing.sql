@@ -28,4 +28,8 @@ create table thing (
   lifespan_id uuid references lifespan -- example: origin date is 2000-01-01
 );
 
+create index idx_color_id on thing(color_id);
+create index idx_geolocation_id on thing(geolocation_id);
+create index idx_lifespan_id on thing(lifespan_id);
+
 --rollback drop table thing;

@@ -24,4 +24,12 @@ create table postal_address (
   name_as_fr varchar, -- example: Acme Entreprise
 );
 
+create index idx_geolocation_id on postal_address(geolocation_id);
+create index idx_country_id on postal_address(country_id);
+create index idx_country_subdivision_id on postal_address(country_subdivision_id);
+create index idx_region_id on postal_address(region_id);
+create index idx_locality_id on postal_address(locality_id);
+create index idx_postal_code_id on postal_address(postal_code_id);
+create index idx_street_address_id on postal_address(street_address_id);
+
 --rollback drop table postal_address;

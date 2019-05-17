@@ -27,4 +27,9 @@ create table action (
   agent_org_id uuid references org, --  example: Acme
 );
 
+create index idx_agent_person_id on action(agent_person_id);
+create index idx_agent_place_id on action(agent_place_id);
+create index idx_agent_thing_id on action(agent_thing_id;
+create index idx_agent_org_id on action(agent_org_id);
+
 --rollback drop table action;

@@ -19,7 +19,12 @@ create table neighborhood (
   name_as_en varchar, -- example: Mission district
   name_as_es varchar, -- example: District de mission
   name_as_fr varchar, -- example: Le district Mission
-  
 );
+
+create index idx_geolocation_id on neighborhood(geolocation_id);
+create index idx_country_id on neighborhood(country_id);
+create index idx_country_subdivision_id on neighborhood(country_subdivision_id);
+create index idx_region_id on neighborhood(region_id);
+create index idx_locality_id on neighborhood(locality_id);
 
 --rollback drop table neighborhood;

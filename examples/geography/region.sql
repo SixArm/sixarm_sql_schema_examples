@@ -20,4 +20,8 @@ create table region (
   name_as_fr varchar -- example: California
 );
 
+create index idx_geolocation_id on region(geolocation_id);
+create index idx_country_id on region(country_id);
+create index idx_country_subdivision_id on region(country_subdivision_id);
+
 --rollback drop table region;
